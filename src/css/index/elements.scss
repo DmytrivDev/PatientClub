@@ -1,9 +1,68 @@
+.pd1 {
+  padding-top: 10rem;
+}
+.pd2 {
+  padding-top: 8.5rem;
+}
+.pd3 {
+  padding-top: 5rem;
+}
+
+.tl1,
+.tl2,
+.tl3,
+.tl4 {
+  &.cw {
+    color: var(--ce);
+    font-weight: 600;
+  }
+}
+.tl1 {
+  font-size: 3.5rem;
+  line-height: 1.28;
+  text-transform: uppercase;
+}
+.tl2 {
+  font-size: 3rem;
+  line-height: 1.16;
+  text-transform: uppercase;
+}
+.tl3 {
+  font-size: 3rem;
+  line-height: normal;
+}
+.tl4 {
+  font-size: 1.5rem;
+  line-height: 1.33;
+}
+
+.btn-def {
+}
+
 @media screen and (max-width: 960px) {
-  .class {
+  .pd1,
+  .pd2,
+  .pd3 {
+    padding-top: 6rem;
+  }
+
+  .tl1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  .tl2 {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+  .tl3 {
+    font-size: 1.75rem;
+    line-height: 1.14;
+  }
+  .tl4 {
+    font-size: 1.125rem;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .class {
-  }
 }

@@ -2,7 +2,7 @@ html,
 body {
   font-optical-sizing: auto;
   font-family: var(--ff);
-  background-color: var(--cw);
+  background-color: var(--cw2);
   color: var(--cm);
   font-size: 1rem;
   line-height: 1.5;
@@ -22,21 +22,20 @@ body {
 
 .main {
   flex: 1 1 auto;
-  padding-bottom: 4rem;
 }
 
 [class*="__container"] {
-  max-width: 85rem;
+  max-width: 86.25rem;
   padding: 0 1.875em;
   margin: 0 auto;
 }
 
-/* --------- Adaptive desktop (1440px) --------- */
+/* --------- Adaptive desktop (1380px) --------- */
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1380px) {
   html,
   body {
-    font-size: 1.16vw;
+    font-size: 1.1594vw;
   }
 }
 
@@ -49,22 +48,15 @@ body {
   }
 
   [class*="__container"] {
-    padding: 0 0.9375em;
+    padding: 0 1em;
   }
 }
 
 /* --------- Adaptive mobile (375px) --------- */
 
 @media screen and (max-width: 375px) {
-  [class*="__container"] {
-    padding: 0 0.625em;
-  }
-}
-
-/* --------- Adaptive mobile (320px) --------- */
-@media screen and (max-width: 320px) {
   html,
   body {
-    font-size: 5vw;
+    font-size: 4.26vw;
   }
 }
