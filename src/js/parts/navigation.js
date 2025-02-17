@@ -78,10 +78,8 @@ function handleMenuItemChildren() {
   }
 
   const mobMenu = document.querySelector('.mobmenu');
-  const footerList = document.querySelector('.footer__list');
 
   if (mobMenu) handleMenu(mobMenu);
-  if (footerList) handleMenu(footerList);
 }
 
 document.addEventListener('DOMContentLoaded', handleMenuItemChildren);
