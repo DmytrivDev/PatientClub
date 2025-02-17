@@ -1,5 +1,15 @@
 import { toggle, up } from 'slide-element';
 
+const langMenu = document.querySelector('.mobmenu .navmenu__lang');
+const langToggle = langMenu?.querySelector('& > li > a');
+
+if (langToggle && langMenu) {
+  langToggle.addEventListener('click', event => {
+    event.preventDefault();
+    langMenu.classList.toggle('isOpened');
+  });
+}
+
 function handleMenuItemChildren() {
   const isMobile = () => window.innerWidth < 960;
 
