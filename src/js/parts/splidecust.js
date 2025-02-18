@@ -9,7 +9,7 @@ export const initSlider = (container, options = {}) => {
     type: 'slide',
     speed: 1000,
     perMove: 1,
-    arrows: true,
+    arrows: false,
     pagination: false,
     updateOnMove: true,
     ...options,

@@ -1,15 +1,18 @@
 import { initSlider } from './splidecust';
 
-// const elemSplide = document.querySelector('.elem');
-// if (elemSplide) {
-//   initSlider(elemSplide, {
-//     perPage: 2,
-//     breakpoints: {
-//       960: {},
-//       500: {},
-//     },
-//   });
-// }
+const specialSplide = document.querySelector('.special');
+if (specialSplide) {
+  initSlider(specialSplide, {
+    perPage: 2,
+    gap: '1.5rem',
+    breakpoints: {
+      960: {
+        perPage: 1,
+        gap: '0.75rem',
+      },
+    },
+  });
+}
 
 // const elemSplides = document.querySelectorAll('.elem');
 // elemSplides?.forEach(container => {

@@ -48,6 +48,26 @@
   border-radius: 2rem;
   border: 0.0625rem solid var(--cr);
   transition: all 0.15s ease-in;
+
+  &.br-gre {
+    background-color: var(--ce);
+    border-color: var(--cg);
+    color: var(--cm);
+  }
+}
+
+.heading {
+  padding-right: 15rem;
+  margin-bottom: 3.125rem;
+}
+.frame-wrapp {
+  position: relative;
+
+  & > .btn-def {
+    position: absolute;
+    top: 0.1875rem;
+    right: 0;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -78,6 +98,22 @@
     width: 100%;
     max-width: 21.5rem;
     padding: 0.9375rem;
+  }
+
+  .heading {
+    padding-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  .frame-wrapp {
+    & > .btn-def {
+      position: static;
+      top: auto;
+      right: auto;
+      margin: 0 auto;
+      margin-top: 2rem;
+      width: 100%;
+      max-width: 21.5rem;
+    }
   }
 }
 
