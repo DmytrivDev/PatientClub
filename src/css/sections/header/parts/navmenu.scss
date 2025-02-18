@@ -38,6 +38,7 @@
                 background-image: var(--vectorRed);
               }
             }
+            & > ul,
             & > .sub-menu {
               visibility: visible;
               opacity: 1;
@@ -60,6 +61,7 @@
               transition: all 0.15s ease-in;
             }
           }
+          & > ul,
           & > .sub-menu {
             visibility: hidden;
             opacity: 0;
@@ -137,6 +139,7 @@
               background-image: var(--vectorRed);
             }
           }
+          & > ul,
           & > .sub-menu {
             visibility: visible;
             opacity: 1;
@@ -172,6 +175,7 @@
           }
         }
 
+        & > ul,
         & > .sub-menu {
           visibility: hidden;
           opacity: 0;
@@ -263,6 +267,7 @@
                 transition: all 0.15s ease-in;
               }
             }
+            & > ul,
             & > .sub-menu {
               display: none;
               flex-direction: column;
@@ -311,6 +316,7 @@
               transition: all 0.15s ease-in;
             }
           }
+          & > ul,
           & > .sub-menu {
             height: 0;
             opacity: 0;
@@ -332,6 +338,7 @@
                 background-image: var(--vectorRed);
               }
             }
+            & > ul,
             & > .sub-menu {
               height: 100%;
               opacity: 1;
