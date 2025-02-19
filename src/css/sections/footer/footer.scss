@@ -28,6 +28,11 @@
         width: fit-content;
         display: block;
         font-weight: 600;
+        &:hover {
+          text-decoration-line: underline;
+          text-decoration-skip-ink: none;
+          text-underline-position: from-font;
+        }
       }
       & > li,
       & > .menu-item {
@@ -55,8 +60,12 @@
       display: block;
       width: 2rem;
       height: 2rem;
+      transition: all 0.15s ease-in;
       img {
         width: 100%;
+      }
+      &:hover {
+        opacity: 0.64;
       }
     }
   }
@@ -91,6 +100,12 @@
       font-size: 0.875rem;
       font-weight: 600;
       line-height: 1.71;
+      transition: all 0.15s ease-in;
+      &:hover {
+        &:hover {
+          opacity: 0.64;
+        }
+      }
     }
   }
   &__mail {
@@ -148,6 +163,9 @@
         gap: 1rem 4rem;
         a {
           width: auto;
+          &:hover {
+            text-decoration: none;
+          }
         }
         & > li,
         & > .menu-item {
@@ -178,6 +196,9 @@
       a {
         width: 2.5rem;
         height: 2.5rem;
+        &:hover {
+          opacity: 1;
+        }
       }
     }
     &__mail,
@@ -185,6 +206,9 @@
       a {
         font-weight: 500;
         line-height: 1.42;
+        &:hover {
+          opacity: 1;
+        }
       }
     }
     &__mail {

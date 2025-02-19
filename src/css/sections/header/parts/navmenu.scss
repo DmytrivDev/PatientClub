@@ -21,29 +21,40 @@
           font-weight: 500;
           transition: all 0.15s ease-in;
           &:hover {
-            color: var(--cr);
+            color: var(--ch);
           }
         }
 
         &.current-menu-item {
           & > a {
-            color: var(--cr);
+            color: var(--cr) !important;
           }
         }
         &.menu-item-has-children {
           position: relative;
+          &::after {
+            position: absolute;
+            bottom: -2.125rem;
+            left: -1rem;
+            right: -1rem;
+            height: 2.125rem;
+          }
           &:hover {
+            &::after {
+              content: "";
+            }
             & > a {
-              color: var(--cr);
+              color: var(--ch);
               &::after {
                 transform: rotateX(-180deg);
-                background-image: var(--vectorRed);
+                background-image: var(--vectorGrey);
               }
             }
             & > ul,
             & > .sub-menu {
               visibility: visible;
               opacity: 1;
+              transform: translateY(2.125rem);
             }
           }
 
@@ -70,25 +81,28 @@
             position: absolute;
             z-index: 2;
             top: 100%;
-            left: -1.5rem;
-            transform: translateY(1.625rem);
-            background-color: var(--cw);
+            left: -1rem;
+            transform: translateY(1.5rem);
+            background-color: var(--ce);
             display: flex;
             flex-direction: column;
             gap: 1rem 0;
-            padding: 1.5rem;
-            width: 16.625rem;
+            padding: 1rem;
+            min-width: 9.6875rem;
+            max-width: 18.75rem;
             border: 0.0625rem solid var(--ca);
-            border-top: none;
+            border-radius: 0.5rem;
+            box-shadow:
+              0 0.8125rem 0.5rem 0 rgba(0, 0, 0, 0.03),
+              0 0.375rem 0.375rem 0 rgba(0, 0, 0, 0.05);
             transition: all 0.15s ease-in;
-
-            &::before {
-              content: "";
-              position: absolute;
-              top: -1.625rem;
-              left: 0;
-              width: 100%;
-              height: 1.625rem;
+            li {
+              flex: 1 1 auto;
+              display: flex;
+              flex-direction: column;
+              a {
+                flex: 1 1 auto;
+              }
             }
           }
         }
@@ -131,21 +145,29 @@
     &__lang {
       & > li {
         position: relative;
+        &::after {
+          position: absolute;
+          bottom: -0.5rem;
+          left: 0;
+          width: 100%;
+          height: 0.5rem;
+        }
         &:hover {
+          &::after {
+            content: "";
+          }
           & > a {
-            color: var(--cr);
-            border-radius: 1.375rem 1.375rem 0 0;
-            border-bottom-color: var(--cw);
+            color: var(--ch);
             &::after {
               transform: rotateX(-180deg);
-              background-image: var(--vectorRed);
+              background-image: var(--vectorGrey);
             }
           }
           & > ul,
           & > .sub-menu {
             visibility: visible;
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0.5rem);
           }
         }
         a {
@@ -153,7 +175,7 @@
           font-weight: 600;
           transition: all 0.15s ease-in;
           &:hover {
-            color: var(--cr);
+            color: var(--ch);
           }
         }
 
@@ -161,7 +183,7 @@
           display: flex;
           align-items: center;
           gap: 0 0.25rem;
-          border-radius: 1.375rem;
+          border-radius: 2rem;
           padding: 0.5625rem 0.9375rem;
           border: 0.0625rem solid var(--cd);
           &::after {
@@ -186,15 +208,17 @@
           top: 100%;
           left: 0;
           background-color: var(--cw);
-          transform: translateY(-0.1875rem);
+          transform: translateY(0);
           display: flex;
           flex-direction: column;
-          gap: 0.3125rem 0;
-          padding: 0 0.9375rem 0.5625rem 0.9375rem;
+          gap: 0.5rem 0;
+          padding: 0.5625rem 0.9375rem;
           width: 100%;
           border: 0.0625rem solid var(--cd);
-          border-top: none;
-          border-radius: 0 0 1.375rem 1.375rem;
+          border-radius: 0.5rem;
+          box-shadow:
+            0 0.8125rem 0.5rem 0 rgba(0, 0, 0, 0.03),
+            0 0.375rem 0.375rem 0 rgba(0, 0, 0, 0.05);
           transition: all 0.15s ease-in;
         }
       }
@@ -244,10 +268,10 @@
           &.menu-item-has-children {
             &.isOpened {
               & > a {
-                color: var(--cr);
+                color: var(--ch);
                 &::after {
                   transform: rotateX(-180deg);
-                  background-image: var(--vectorRed);
+                  background-image: var(--vectorGrey);
                 }
               }
             }
@@ -265,7 +289,7 @@
                 background-size: 1rem 1rem;
                 background-position: center center;
                 background-repeat: no-repeat;
-                background-image: var(--vectorBla);
+                background-image: var(--vectorGree);
                 transition: all 0.15s ease-in;
               }
             }
@@ -273,8 +297,12 @@
             & > .sub-menu {
               display: none;
               flex-direction: column;
+              gap: 1.25rem 0;
+              padding: 0.25rem 0 1.5rem 0;
               a {
-                padding: 0.25rem 0.5rem;
+                padding: 0 1rem;
+                line-height: 1.5;
+                font-weight: 500;
               }
             }
           }
@@ -314,7 +342,7 @@
               background-size: 1rem 1rem;
               background-position: center center;
               background-repeat: no-repeat;
-              background-image: var(--vectorBla);
+              background-image: var(--vectorGree);
               transition: all 0.15s ease-in;
             }
           }
@@ -334,10 +362,10 @@
         &.isOpened {
           & > li {
             & > a {
-              color: var(--cr);
+              color: var(--ch);
               &::after {
                 transform: rotateX(-180deg);
-                background-image: var(--vectorRed);
+                background-image: var(--vectorGrey);
               }
             }
             & > ul,
@@ -345,6 +373,10 @@
               height: 100%;
               opacity: 1;
               visibility: visible;
+              a {
+                font-weight: 500;
+                line-height: 1.5;
+              }
             }
           }
         }

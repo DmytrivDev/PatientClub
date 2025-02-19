@@ -24,17 +24,53 @@
       background-position: center center;
       background-repeat: no-repeat;
       background-image: var(--vectorBla);
+      transform: scale(1);
       transition: all 0.15s ease-in;
+    }
+    &:hover {
+      border-color: var(--ce2);
+      &::before {
+        transform: rotate(90deg);
+      }
+    }
+    &.isDisabled {
+      cursor: no-drop;
+      opacity: 0.62;
+      border-color: var(--ce2);
     }
   }
   &__prev {
     &::before {
       transform: rotate(90deg);
     }
+    &:hover {
+      &::before {
+        transform: rotate(90deg) scale(1.2);
+      }
+    }
+    &.isDisabled {
+      &:hover {
+        &::before {
+          transform: rotate(90deg) scale(1);
+        }
+      }
+    }
   }
   &__next {
     &::before {
       transform: rotate(-90deg);
+    }
+    &:hover {
+      &::before {
+        transform: rotate(-90deg) scale(1.2);
+      }
+    }
+    &.isDisabled {
+      &:hover {
+        &::before {
+          transform: rotate(-90deg) scale(1);
+        }
+      }
     }
   }
 }
@@ -80,6 +116,26 @@
   .arrows {
     &__body {
       gap: 0 0.5rem;
+    }
+    &__prev,
+    &__next {
+      &:hover {
+        border-color: var(--cd);
+      }
+    }
+    &__prev {
+      &:hover {
+        &::before {
+          transform: rotate(90deg) scale(1);
+        }
+      }
+    }
+    &__next {
+      &:hover {
+        &::before {
+          transform: rotate(-90deg) scale(1);
+        }
+      }
     }
   }
 

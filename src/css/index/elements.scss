@@ -48,11 +48,19 @@
   border-radius: 2rem;
   border: 0.0625rem solid var(--cr);
   transition: all 0.15s ease-in;
+  &:hover {
+    color: var(--cr);
+    background-color: var(--ce);
+  }
 
   &.br-gre {
     background-color: var(--ce);
     border-color: var(--cg);
     color: var(--cm);
+    &:hover {
+      color: var(--ce);
+      background-color: var(--cg);
+    }
   }
 }
 
