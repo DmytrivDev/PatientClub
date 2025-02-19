@@ -49,7 +49,7 @@
 
   // ============== Splide ==============
   .splide__list {
-    display: flex;
+    display: flex !important;
   }
   .splide__pagination {
     position: static;
