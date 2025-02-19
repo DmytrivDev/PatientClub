@@ -142,11 +142,7 @@
   .splide-wrapp {
     &.var1 {
       .arrows {
-        position: static;
-        top: auto;
-        right: auto;
-        transform: translateY(0);
-        margin-top: 2rem;
+        display: none;
       }
     }
     .arrows {

@@ -38,8 +38,12 @@ if (processSplide) {
     gap: '1.5rem',
     breakpoints: {
       960: {
+        pagination: true,
+        perPage: 3,
+        gap: '1rem',
+      },
+      875: {
         perPage: 2,
-        gap: '0.75rem',
       },
       575: {
         perPage: 1,
