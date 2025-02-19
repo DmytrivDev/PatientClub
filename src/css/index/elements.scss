@@ -11,10 +11,14 @@
 .tl1,
 .tl2,
 .tl3,
-.tl4 {
+.tl4,
+.tl5 {
   &.cw {
     color: var(--ce);
     font-weight: 600;
+  }
+  &.upper {
+    text-transform: uppercase;
   }
 }
 .tl1 {
@@ -25,7 +29,6 @@
 .tl2 {
   font-size: 3rem;
   line-height: 1.16;
-  text-transform: uppercase;
 }
 .tl3 {
   font-size: 3rem;
@@ -34,6 +37,10 @@
 .tl4 {
   font-size: 1.5rem;
   line-height: 1.33;
+}
+.tl5 {
+  font-size: 1.125rem;
+  line-height: 1.55;
 }
 
 .btn-def {
@@ -66,7 +73,7 @@
 
 .heading {
   padding-right: 15rem;
-  margin-bottom: 3.125rem;
+  margin-bottom: 2.75rem;
 }
 .frame-wrapp {
   position: relative;
@@ -100,6 +107,10 @@
   }
   .tl4 {
     font-size: 1.125rem;
+  }
+  .tl5 {
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
   .btn-def {

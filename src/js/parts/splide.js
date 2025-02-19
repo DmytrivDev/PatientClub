@@ -14,6 +14,40 @@ if (specialSplide) {
   });
 }
 
+const supportSplide = document.querySelector('.support');
+if (supportSplide) {
+  initSlider(supportSplide, {
+    perPage: 4,
+    gap: '1.5rem',
+    breakpoints: {
+      960: {
+        perPage: 2,
+        gap: '0.75rem',
+      },
+      575: {
+        perPage: 1,
+      },
+    },
+  });
+}
+
+const processSplide = document.querySelector('.process');
+if (processSplide) {
+  initSlider(processSplide, {
+    perPage: 4,
+    gap: '1.5rem',
+    breakpoints: {
+      960: {
+        perPage: 2,
+        gap: '0.75rem',
+      },
+      575: {
+        perPage: 1,
+      },
+    },
+  });
+}
+
 // const elemSplides = document.querySelectorAll('.elem');
 // elemSplides?.forEach(container => {
 //   initSlider(container, {
@@ -25,34 +59,42 @@ if (specialSplide) {
 //   });
 // });
 
-// let elemSliderInstance;
-// const elem = document.querySelector('.elem');
+let certifiedSliderInstance;
+const certified = document.querySelector('.certified');
 
-// const initElemSlider = () => {
-//   if (elem && !elemSliderInstance) {
-//     elemSliderInstance = initSlider(elem, {
-//       perPage: 2,
-//       breakpoints: {
-//         960: {},
-//         500: {},
-//       },
-//     });
-//   }
-// };
+const initElemSlider = () => {
+  if (certified && !certifiedSliderInstance) {
+    certifiedSliderInstance = initSlider(certified, {
+      perPage: 6,
+      gap: '2.5rem',
+      breakpoints: {
+        875: {
+          perPage: 5,
+        },
+        675: {
+          perPage: 4,
+        },
+        575: {
+          perPage: 3,
+        },
+      },
+    });
+  }
+};
 
-// const destroySliders = () => {
-//   if (elemSliderInstance) {
-//     elemSliderInstance.destroy();
-//     elemSliderInstance = null;
-//   }
-// };
+const destroySliders = () => {
+  if (certifiedSliderInstance) {
+    certifiedSliderInstance.destroy();
+    certifiedSliderInstance = null;
+  }
+};
 
-// const checkViewport = () => {
-//   initElemSlider();
-//   if (window.innerWidth > 960) {
-//     destroySliders();
-//   }
-// };
+const checkViewport = () => {
+  initElemSlider();
+  if (window.innerWidth > 960) {
+    destroySliders();
+  }
+};
 
-// window.addEventListener('resize', checkViewport);
-// document.addEventListener('DOMContentLoaded', checkViewport);
+window.addEventListener('resize', checkViewport);
+document.addEventListener('DOMContentLoaded', checkViewport);
