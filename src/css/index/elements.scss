@@ -43,6 +43,11 @@
   line-height: 1.55;
 }
 
+.txt-def {
+  font-weight: 500;
+  color: var(--ch);
+}
+
 .btn-def {
   flex-shrink: 0;
   display: block;
@@ -67,6 +72,16 @@
     &:hover {
       color: var(--ce);
       background-color: var(--cg);
+    }
+  }
+  &.br-gry {
+    background-color: var(--ce);
+    border-color: var(--cd);
+    color: var(--cm);
+    &:hover {
+      color: var(--ce);
+      background-color: var(--cg);
+      border-color: var(--cg);
     }
   }
 }
@@ -111,6 +126,11 @@
   .tl5 {
     font-size: 1rem;
     line-height: 1.5;
+  }
+
+  .txt-def {
+    font-size: 0.875rem;
+    line-height: 1.42;
   }
 
   .btn-def {

@@ -52,6 +52,20 @@ if (processSplide) {
   });
 }
 
+const reviewsSplide = document.querySelector('.reviews');
+if (reviewsSplide) {
+  initSlider(reviewsSplide, {
+    perPage: 2,
+    gap: '1.5rem',
+    breakpoints: {
+      960: {
+        perPage: 1,
+        gap: '1rem',
+      },
+    },
+  });
+}
+
 // const elemSplides = document.querySelectorAll('.elem');
 // elemSplides?.forEach(container => {
 //   initSlider(container, {

@@ -45,6 +45,14 @@
     width: 100%;
   }
 
+  &__card {
+    min-height: 22rem;
+    border-radius: 1.5rem;
+    background-color: var(--ce);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
   &__txt {
     font-weight: 500;
     margin-bottom: auto;
@@ -66,14 +74,6 @@
   .splide {
     &__track {
       overflow: visible;
-    }
-    &__slide {
-      min-height: 22rem;
-      border-radius: 1.5rem;
-      background-color: var(--ce);
-      padding: 2rem 1.5rem;
-      display: flex;
-      flex-direction: column;
     }
   }
   .current__slide {
@@ -102,11 +102,10 @@
       padding: 3.125rem 0 7.0625rem 0;
     }
 
-    .splide {
-      &__slide {
-        max-width: calc(100% - 2.0625rem);
-      }
+    &__card {
+      max-width: calc(100% - 2.0625rem);
     }
+
     .splide__pagination {
       position: absolute;
       transform: translateY(100%);

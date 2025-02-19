@@ -36,7 +36,7 @@
     &.isDisabled {
       cursor: no-drop;
       opacity: 0.62;
-      border-color: var(--ce2);
+      border-color: var(--cd) !important;
     }
   }
   &__prev {
@@ -120,7 +120,7 @@
     &__prev,
     &__next {
       &:hover {
-        border-color: var(--ce2);
+        border-color: var(--cd);
       }
     }
     &__prev {
