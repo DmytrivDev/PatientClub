@@ -4,6 +4,14 @@ import IMask from 'imask';
 import isEmail from 'validator/lib/isEmail';
 import isEmpty from 'validator/lib/isEmpty';
 
+import { openModal } from './modal.js';
+
+export function toggleCompletPartForm(state) {
+  const commentWrapp = document.querySelector('.comment__wrapp');
+  if (!commentWrapp) return;
+  commentWrapp.classList.toggle('isComplet', state);
+}
+
 const forms = document.querySelectorAll('.submitForm');
 
 forms?.forEach(form => {
@@ -71,7 +79,17 @@ function submitForm(e) {
   });
 
   if (!errors) {
-    setTimeout(() => e.target.reset(), 300);
+    setTimeout(() => {
+      e.target.reset();
+    }, 300);
+
+    if (e.target.id === 'commentForm') {
+      toggleCompletPartForm(true);
+    }
+
+    if (e.target.id === 'doneForm') {
+      openModal('idDone');
+    }
 
     // sendForm(e.target);
   }

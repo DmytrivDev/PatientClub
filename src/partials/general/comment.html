@@ -1,0 +1,94 @@
+<div class="comment modal" id="idComment">
+  <div class="modal__container containerModal">
+    <div class="modal__body">
+      <button
+        type="button"
+        class="modal__close closeModal"
+        aria-label="Close modal window"
+      ></button>
+
+      <div class="comment__wrapp">
+        <div class="comment__content">
+          <h2 class="modal__tl">Оставить отзыв</h2>
+          <div class="txt-def">
+            <p>
+              Пожалуйста, оставьте свои комментарии и оценки, чтобы мы могли
+              учесть ваши пожелания и продолжать развиваться.
+            </p>
+          </div>
+
+          <form class="form submitForm" id="commentForm">
+            <div class="form__box">
+              <label class="label__def">
+                <span class="input__def">
+                  <input
+                    type="text"
+                    placeholder="Ваше Имя*"
+                    name="name"
+                    data-required="true"
+                  />
+                </span>
+              </label>
+              <label class="label__def">
+                <span class="input__def">
+                  <input
+                    type="email"
+                    placeholder="Email*"
+                    name="email"
+                    data-required="true"
+                  />
+                </span>
+              </label>
+              <label class="label__def">
+                <span class="input__def">
+                  <input type="text" placeholder="Откуда вы" name="local" />
+                </span>
+              </label>
+              <label class="label__def">
+                <span class="input__def">
+                  <input type="text" placeholder="Клиника" name="clinic" />
+                </span>
+              </label>
+              <label class="label__def">
+                <span class="area__def">
+                  <textarea
+                    rows="4"
+                    placeholder="Отзыв"
+                    name="comment"
+                  ></textarea>
+                </span>
+              </label>
+            </div>
+
+            <div class="form__bottom">
+              <button type="submit" class="btn-def btn-cw">
+                Оставить отзыв
+              </button>
+              <div class="form__desc">
+                <p>
+                  Нажимая "Оставить отзыв", вы соглашаетесь с нашими
+                  <a href="./policy.html">Условиями использования</a> и
+                  <a href="./policy.html">Политикой конфиденциальности</a>.
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="complet">
+          <span class="complet__icon">
+            <img src="./img/icons/done.svg" alt="Done" />
+          </span>
+          <h2 class="modal__tl">Оставить отзыв</h2>
+          <div class="txt-def">
+            <p>
+              Ваше мнение очень важно для нас. Мы ценим, что вы нашли время,
+              чтобы поделиться своим опытом. Ваш отзыв поможет нам стать лучше!
+            </p>
+          </div>
+          <button type="button" class="btn-def closeModal">Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

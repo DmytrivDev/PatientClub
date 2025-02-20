@@ -1,5 +1,7 @@
 import { lockScroll, unlockScroll } from './lockscroll.js';
 
+import { toggleCompletPartForm } from './forms.js';
+
 const activeModals = new Set();
 const initializedModals = new WeakSet();
 
@@ -13,6 +15,7 @@ export function closeModal(modal) {
   modal.classList.remove('isOpened', 'isAnimation');
   activeModals.delete(modal);
   unlockScroll();
+  toggleCompletPartForm(false);
 }
 
 function initCloseModal(modal) {
