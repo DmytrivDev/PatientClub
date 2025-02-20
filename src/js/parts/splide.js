@@ -59,8 +59,10 @@ if (reviewsSplide) {
     gap: '1.5rem',
     breakpoints: {
       960: {
-        perPage: 1,
         gap: '1rem',
+      },
+      760: {
+        perPage: 1,
       },
     },
   });
