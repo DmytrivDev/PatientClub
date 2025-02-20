@@ -112,6 +112,92 @@
   }
 }
 
+.pagination__wrapp {
+  margin-top: 2rem;
+  & > div {
+    display: flex;
+    justify-content: center;
+  }
+  .facetwp-pager {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 1.25rem;
+  }
+  .facetwp-page {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.33;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: all 0.15s ease-in;
+    &:hover {
+      color: var(--ch);
+    }
+
+    &.active {
+      color: var(--ch);
+    }
+    &.prev,
+    &.next {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      border: 0.0625rem solid var(--cd);
+      background-color: var(--ce);
+      transition: all 0.15s ease-in;
+      &::before {
+        content: "";
+        flex-shrink: 0;
+        width: 1rem;
+        height: 1rem;
+        background-size: 1rem 1rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: var(--vectorBla);
+        transform: scale(1);
+        transition: all 0.15s ease-in;
+      }
+      &:hover {
+        border-color: var(--ce2);
+        &::before {
+          transform: rotate(90deg);
+        }
+      }
+    }
+    &.prev {
+      margin-right: 2.75rem;
+      &::before {
+        transform: rotate(90deg);
+      }
+      &:hover {
+        &::before {
+          transform: rotate(90deg) scale(1.2);
+        }
+      }
+    }
+    &.next {
+      margin-left: 2.75rem;
+      &::before {
+        transform: rotate(-90deg);
+      }
+      &:hover {
+        &::before {
+          transform: rotate(-90deg) scale(1.2);
+        }
+      }
+    }
+  }
+}
+
 .form {
   &__box {
     display: flex;
@@ -201,6 +287,37 @@
       }
       &__body {
         justify-content: end;
+      }
+    }
+  }
+
+  .pagination__wrapp {
+    .facetwp-pager {
+      max-width: 28.125rem;
+    }
+
+    .facetwp-page {
+      &.prev,
+      &.next {
+        &:hover {
+          border-color: var(--cd);
+        }
+      }
+      &.prev {
+        margin-right: auto;
+        &:hover {
+          &::before {
+            transform: rotate(90deg) scale(1);
+          }
+        }
+      }
+      &.next {
+        margin-left: auto;
+        &:hover {
+          &::before {
+            transform: rotate(-90deg) scale(1);
+          }
+        }
       }
     }
   }

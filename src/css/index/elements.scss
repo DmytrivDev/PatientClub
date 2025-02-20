@@ -13,9 +13,9 @@
 .tl3,
 .tl4,
 .tl5 {
+  font-weight: 600;
   &.cw {
     color: var(--ce);
-    font-weight: 600;
   }
   &.upper {
     text-transform: uppercase;
@@ -79,9 +79,9 @@
     border-color: var(--cd);
     color: var(--cm);
     &:hover {
-      color: var(--ce);
       background-color: var(--cg);
       border-color: var(--cg);
+      color: var(--ce);
     }
   }
 }

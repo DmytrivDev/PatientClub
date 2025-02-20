@@ -2,7 +2,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 85.137vh;
 
   &__bg {
     position: absolute;
@@ -31,7 +30,6 @@
   &__body {
     position: relative;
     z-index: 5;
-    min-height: 46.875rem;
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
@@ -95,10 +93,7 @@
 
 @media screen and (max-width: 960px) {
   .process {
-    min-height: auto;
-
     &__body {
-      min-height: auto;
       padding: 3.125rem 0 7.0625rem 0;
     }
 

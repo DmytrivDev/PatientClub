@@ -68,6 +68,22 @@ if (reviewsSplide) {
   });
 }
 
+const solutionsSplide = document.querySelector('.solutions');
+if (solutionsSplide) {
+  initSlider(solutionsSplide, {
+    perPage: 2,
+    gap: '2rem',
+    breakpoints: {
+      960: {
+        gap: '1rem',
+      },
+      760: {
+        perPage: 1,
+      },
+    },
+  });
+}
+
 // const elemSplides = document.querySelectorAll('.elem');
 // elemSplides?.forEach(container => {
 //   initSlider(container, {

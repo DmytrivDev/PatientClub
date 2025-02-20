@@ -24,6 +24,7 @@
 @import url('./sections/home/hero.scss');
 @import url('./sections/home/special.scss');
 @import url('./sections/home/support.scss');
+@import url('./sections/home/solutions.scss');
 @import url('./sections/home/certified.scss');
 @import url('./sections/home/process.scss');
 
@@ -32,6 +33,7 @@
 
 /* Program */
 /* @import url('./sections/program/program.scss'); */
+@import url('./sections/program/complex.scss');
 
 /* About */
 /* @import url('./sections/about/about.scss'); */

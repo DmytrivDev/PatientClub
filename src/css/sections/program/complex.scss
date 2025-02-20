@@ -1,0 +1,38 @@
+.complex {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+  }
+
+  .solut {
+    &__card {
+      width: 100%;
+      max-width: calc((100% - 1 * 2.5rem) / 2);
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .complex {
+    &__list {
+      gap: 1.5rem;
+    }
+
+    .solut {
+      &__card {
+        max-width: calc((100% - 1 * 1.5rem) / 2);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .complex {
+    .solut {
+      &__card {
+        max-width: 100%;
+      }
+    }
+  }
+}
