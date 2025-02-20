@@ -11,9 +11,11 @@
 @import url('./index/cluster.scss');
 
 /* General */
+@import url('./sections/general/screenbg.scss');
 @import url('./sections/general/reviews.scss');
 @import url('./sections/general/modal.scss');
 @import url('./sections/general/comment.scss');
+@import url('./sections/general/connect.scss');
 
 /* Header */
 @import url('./sections/header/header.scss');

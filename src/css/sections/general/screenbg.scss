@@ -1,0 +1,59 @@
+.screenbg {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &.isFull {
+    min-height: 85.137vh;
+
+    & > [class*="__body"] {
+      min-height: 46.875rem;
+    }
+  }
+
+  & > [class*="__bg"] {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  & > [class*="__body"] {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+
+    & > [class*="__container"] {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .screenbg {
+    &.isFull {
+      min-height: auto;
+
+      & > [class*="__body"] {
+        min-height: auto;
+      }
+    }
+  }
+}

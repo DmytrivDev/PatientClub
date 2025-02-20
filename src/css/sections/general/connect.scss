@@ -1,0 +1,41 @@
+.connect {
+  margin-top: 8.5rem;
+
+  &__bg {
+    &::before {
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.32) 0%,
+        rgba(0, 0, 0, 0.56) 100%
+      );
+    }
+  }
+
+  &__body {
+    padding: 5.9375rem 0 5rem 0;
+    .tl3 {
+    }
+    .txt-def {
+    }
+  }
+  &__container {
+  }
+}
+
+.form {
+  &__box {
+  }
+
+  .label__def {
+  }
+  .checkbox__def {
+  }
+  .btn-def {
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .connect {
+    margin-top: 6rem;
+  }
+}

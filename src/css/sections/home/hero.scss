@@ -1,25 +1,9 @@
 .hero {
-  position: relative;
-  display: flex;
-  flex-direction: column;
   min-height: 85.137vh;
   // min-height: 43.751vw;
 
   &__bg {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     &::before {
-      content: "";
-      position: absolute;
-      z-index: 2;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
       background: linear-gradient(
         180deg,
         rgba(0, 0, 0, 0.32) 0%,
@@ -29,19 +13,10 @@
   }
 
   &__body {
-    position: relative;
-    z-index: 5;
     min-height: 39.375rem;
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
   }
   &__container {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 100%;
   }
 
   &__content {

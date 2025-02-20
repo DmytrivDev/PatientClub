@@ -2,7 +2,7 @@
   .splide {
     &__track {
       overflow: visible;
-      max-width: calc(100% - 8rem);
+      // max-width: calc(100% - 8rem);
     }
   }
 }
@@ -27,7 +27,7 @@
 
   &__img {
     overflow: hidden;
-    padding-top: 60.284%;
+    padding-top: 60.257%;
     border-radius: 1rem;
     background-color: var(--ck);
   }

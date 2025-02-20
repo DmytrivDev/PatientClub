@@ -1,4 +1,6 @@
 // import axios from 'axios';
+import intlTelInput from 'intl-tel-input';
+import 'intl-tel-input/build/css/intlTelInput.css';
 
 import IMask from 'imask';
 import isEmail from 'validator/lib/isEmail';
@@ -159,10 +161,25 @@ function isMaskFilledTel(field) {
   return phoneMask.masked.isComplete;
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  const telInputs = document.querySelectorAll('input[type="tel"]');
+const phoneInput = document.querySelectorAll('input[type="tel"]');
 
-  telInputs.forEach(input => {
-    IMask(input, maskOptionsTel);
-  });
+phoneInput?.forEach(input => {
+  if (input) {
+    const iti = intlTelInput(input, {
+      initialCountry: 'auto', // Визначення країни за IP
+      geoIpLookup: callback => {
+        fetch('https://ipapi.co/json') // Або інший API для отримання країни
+          .then(res => res.json())
+          .then(data => callback(data.country_code))
+          .catch(() => callback('UA')); // За замовчуванням Україна
+      },
+      utilsScript:
+        'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/20.1.5/js/utils.js', // Додатковий скрипт для форматування
+    });
+
+    // Отримання номера у міжнародному форматі перед відправкою форми
+    input.addEventListener('blur', () => {
+      console.log('Форматований номер:', iti.getNumber());
+    });
+  }
 });

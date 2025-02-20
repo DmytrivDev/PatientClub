@@ -84,6 +84,15 @@
       color: var(--ce);
     }
   }
+  &.bg-cw {
+    background-color: var(--ce);
+    color: var(--cm);
+    border-color: var(--ce);
+    &:hover {
+      background-color: transparent;
+      color: var(--ce);
+    }
+  }
 }
 
 .heading {
