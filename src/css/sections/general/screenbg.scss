@@ -3,11 +3,87 @@
   display: flex;
   flex-direction: column;
 
-  &.isFull {
+  &.isFullMod {
     min-height: 85.137vh;
+
+    & > [class*="__bg"] {
+      &::before {
+        content: none;
+      }
+    }
 
     & > [class*="__body"] {
       min-height: 46.875rem;
+
+      & > [class*="__container"] {
+        &.isReverse {
+          align-items: end;
+          & > [class*="__content"] {
+            &::before {
+              right: auto;
+              left: 0;
+              background: linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0) 0%,
+                rgba(0, 0, 0, 0.32) 100%
+              );
+            }
+
+            &.var1 {
+              padding-right: 0;
+              padding-left: 4rem;
+            }
+            &.var2 {
+              padding-right: 0;
+              padding-left: 7rem;
+            }
+            &.var3 {
+              padding-right: 0;
+              padding-left: 4rem;
+            }
+          }
+        }
+
+        & > [class*="__content"] {
+          padding: 5rem 0;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          flex: 1 1 auto;
+
+          &::before {
+            content: "";
+            border-right: 0.125rem solid var(--cd3);
+            border-left: 0.125rem solid var(--cd3);
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            width: 100vw;
+            height: 100%;
+            background: linear-gradient(
+              270deg,
+              rgba(0, 0, 0, 0) 0%,
+              rgba(0, 0, 0, 0.32) 100%
+            );
+            backdrop-filter: blur(0.75rem);
+          }
+
+          &.var1 {
+            width: 58.125rem;
+            padding-right: 4rem;
+          }
+          &.var2 {
+            width: 54.375rem;
+            padding-right: 7rem;
+          }
+          &.var3 {
+            width: 47.5rem;
+            padding-right: 4rem;
+          }
+        }
+      }
     }
   }
 
@@ -48,11 +124,51 @@
 
 @media screen and (max-width: 960px) {
   .screenbg {
-    &.isFull {
+    &.isFullMod {
       min-height: auto;
 
       & > [class*="__body"] {
         min-height: auto;
+
+        & > [class*="__container"] {
+          &.isReverse {
+            align-items: end;
+            & > [class*="__content"] {
+              &::before {
+                left: 50%;
+                background: rgba(0, 0, 0, 0.48);
+              }
+
+              &.var1,
+              &.var2,
+              &.var3 {
+                width: 100%;
+                padding-left: 0;
+              }
+            }
+          }
+
+          & > [class*="__content"] {
+            padding: 4rem 0;
+
+            &::before {
+              top: 50%;
+              left: 50%;
+              right: auto;
+              transform: translateX(-50%) translateY(-50%);
+              border: none;
+              background: rgba(0, 0, 0, 0.48);
+              backdrop-filter: blur(0.5rem);
+            }
+
+            &.var1,
+            &.var2,
+            &.var3 {
+              width: 100%;
+              padding-right: 0;
+            }
+          }
+        }
       }
     }
   }

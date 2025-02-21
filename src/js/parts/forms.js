@@ -159,13 +159,13 @@ phoneInputs?.forEach(input => {
 
   const iti = intlTelInput(input, {
     strictMode: true,
-    initialCountry: 'auto',
-    geoIpLookup: (success, failure) => {
-      fetch('https://ipapi.co/json')
-        .then(res => res.json())
-        .then(data => success(data.country_code))
-        .catch(() => failure());
-    },
+    initialCountry: 'ua',
+    // geoIpLookup: (success, failure) => {
+    //   fetch('https://ipapi.co/json')
+    //     .then(res => res.json())
+    //     .then(data => success(data.country_code))
+    //     .catch(() => failure());
+    // },
     loadUtils: () => import('intl-tel-input/build/js/utils.js'),
     dropdownContainer: wrapper,
     separateDialCode: true,

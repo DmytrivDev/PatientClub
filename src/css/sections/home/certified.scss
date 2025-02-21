@@ -1,5 +1,4 @@
 .certified {
-  padding-bottom: 5.625rem;
   &__box {
     width: 8.125rem;
     height: 8.125rem;
@@ -39,7 +38,6 @@
 
 @media screen and (max-width: 960px) {
   .certified {
-    padding-bottom: 5.9375rem;
     &__box {
       width: 5rem;
       height: 5rem;

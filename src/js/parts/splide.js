@@ -98,7 +98,7 @@ if (solutionsSplide) {
 let certifiedSliderInstance;
 const certified = document.querySelector('.certified');
 
-const initElemSlider = () => {
+const initCertifiedSlider = () => {
   if (certified && !certifiedSliderInstance) {
     certifiedSliderInstance = initSlider(certified, {
       perPage: 6,
@@ -118,15 +118,38 @@ const initElemSlider = () => {
   }
 };
 
+let prioritySliderInstance;
+const priority = document.querySelector('.priority');
+
+const initPrioritySlider = () => {
+  if (priority && !prioritySliderInstance) {
+    prioritySliderInstance = initSlider(priority, {
+      perPage: 2,
+      gap: '1rem',
+      pagination: true,
+      breakpoints: {
+        675: {
+          perPage: 1,
+        },
+      },
+    });
+  }
+};
+
 const destroySliders = () => {
   if (certifiedSliderInstance) {
     certifiedSliderInstance.destroy();
     certifiedSliderInstance = null;
   }
+  if (prioritySliderInstance) {
+    prioritySliderInstance.destroy();
+    prioritySliderInstance = null;
+  }
 };
 
 const checkViewport = () => {
-  initElemSlider();
+  initCertifiedSlider();
+  initPrioritySlider();
   if (window.innerWidth > 960) {
     destroySliders();
   }

@@ -1,6 +1,4 @@
 .connect {
-  margin-top: 8.5rem;
-
   &__bg {
     &::before {
       background: linear-gradient(
@@ -165,8 +163,6 @@
 
 @media screen and (max-width: 960px) {
   .connect {
-    margin-top: 6rem;
-
     &__body {
       padding: 4rem 0;
       .tl3 {

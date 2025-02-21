@@ -25,8 +25,11 @@
 /* Home */
 @import url('./sections/home/hero.scss');
 @import url('./sections/home/special.scss');
+@import url('./sections/home/club.scss');
 @import url('./sections/home/support.scss');
+@import url('./sections/home/priority.scss');
 @import url('./sections/home/solutions.scss');
+@import url('./sections/home/technol.scss');
 @import url('./sections/home/certified.scss');
 @import url('./sections/home/process.scss');
 

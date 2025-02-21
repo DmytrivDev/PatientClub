@@ -19,7 +19,7 @@
     align-items: center;
   }
 
-  &__content {
+  &__box {
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
@@ -117,7 +117,7 @@
       min-height: 46.125rem;
     }
 
-    &__content {
+    &__box {
       max-width: 45.3125rem;
       padding: 4.5rem 0;
 

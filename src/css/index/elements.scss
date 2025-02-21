@@ -8,6 +8,16 @@
   padding-top: 5rem;
 }
 
+.mr1 {
+  margin-top: 10rem;
+}
+.mr2 {
+  margin-top: 8.5rem;
+}
+.mr3 {
+  margin-top: 5rem;
+}
+
 .tl1,
 .tl2,
 .tl3,
@@ -46,6 +56,12 @@
 .txt-def {
   font-weight: 500;
   color: var(--ch);
+  &.cw {
+    color: var(--ce);
+  }
+  b {
+    font-weight: 700;
+  }
 }
 
 .btn-def {
@@ -93,6 +109,15 @@
       color: var(--ce);
     }
   }
+  &.bg-trn {
+    background-color: transparent;
+    color: var(--ce);
+    border-color: var(--ce);
+    &:hover {
+      background-color: var(--ce);
+      color: var(--cm);
+    }
+  }
 }
 
 .heading {
@@ -114,6 +139,11 @@
   .pd2,
   .pd3 {
     padding-top: 6rem;
+  }
+  .mr1,
+  .mr2,
+  .mr3 {
+    margin-top: 6rem;
   }
 
   .tl1 {
