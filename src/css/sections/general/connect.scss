@@ -138,6 +138,7 @@
         text-decoration-line: underline;
         text-decoration-skip-ink: none;
         text-underline-position: from-font;
+        text-decoration-thickness: 0.0625rem;
       }
       &.isRequire {
         span {
@@ -165,5 +166,57 @@
 @media screen and (max-width: 960px) {
   .connect {
     margin-top: 6rem;
+
+    &__body {
+      padding: 4rem 0;
+      .tl3 {
+        text-align: start;
+        margin-bottom: 0.5rem;
+      }
+      .txt-def {
+        text-align: start;
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+      }
+    }
+    &__container {
+      align-items: start;
+    }
+
+    .form {
+      max-width: 100%;
+
+      .label__def {
+        border-radius: 0.75rem;
+        input,
+        textarea {
+          border-radius: 0.75rem;
+        }
+      }
+
+      &__box {
+        margin-bottom: 2.75rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .connect {
+    .form {
+      &__box {
+        grid-template-columns: 1fr;
+      }
+
+      .label__def {
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5) {
+          grid-area: auto;
+        }
+      }
+    }
   }
 }
