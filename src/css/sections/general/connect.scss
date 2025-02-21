@@ -138,7 +138,7 @@
         text-decoration-line: underline;
         text-decoration-skip-ink: none;
         text-underline-position: from-font;
-        text-decoration-thickness: 0.0625rem;
+        text-decoration-thickness: 1px;
       }
       &.isRequire {
         span {
@@ -186,6 +186,10 @@
     .form {
       max-width: 100%;
 
+      &__box {
+        order: 1;
+        margin-bottom: 2.75rem;
+      }
       .label__def {
         border-radius: 0.75rem;
         input,
@@ -193,9 +197,13 @@
           border-radius: 0.75rem;
         }
       }
-
-      &__box {
-        margin-bottom: 2.75rem;
+      .checkbox__def {
+        order: 3;
+        margin-top: 1rem;
+        margin-bottom: 0;
+      }
+      .btn-def {
+        order: 2;
       }
     }
   }
