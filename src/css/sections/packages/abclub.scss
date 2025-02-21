@@ -1,0 +1,29 @@
+.abclub {
+  &__content {
+    .tl2 {
+      margin-bottom: 1rem;
+    }
+    .tl4 {
+      margin-bottom: 1.5rem;
+    }
+    .txt-def {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .abclub {
+    &__content {
+      .tl2 {
+        margin-bottom: 1.5rem;
+      }
+      .tl4 {
+        margin-bottom: 1rem;
+      }
+      .btn-def {
+        margin: 0 auto;
+      }
+    }
+  }
+}

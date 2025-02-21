@@ -1,0 +1,29 @@
+.achiev {
+  &__content {
+    .tl2 {
+      margin-bottom: 2.5rem;
+    }
+    .txt-def {
+      font-size: 1.5rem;
+      line-height: 1.33;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .achiev {
+    br {
+      display: none;
+    }
+    &__content {
+      padding-top: 14.375rem !important;
+      .tl2 {
+        margin-bottom: 1rem;
+      }
+      .txt-def {
+        font-size: 0.875rem;
+        line-height: 1.42;
+      }
+    }
+  }
+}
