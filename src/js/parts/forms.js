@@ -115,7 +115,7 @@ function checkFields(field, type, val) {
   }
 
   if (type === 'tel') {
-    if (isEmpty(val) || !isMaskFilledTel(field)) {
+    if (isEmpty(val)) {
       field.closest('label').classList.add('isRequire');
       errors = true;
     }
@@ -151,35 +151,23 @@ function removeErrors(field) {
   }
 }
 
-const maskOptionsTel = {
-  mask: '+{38} (000) 000 00 00',
-};
+const phoneInputs = document.querySelectorAll('input[type="tel"]');
 
-function isMaskFilledTel(field) {
-  const phoneMask = IMask(field, maskOptionsTel);
+phoneInputs?.forEach(input => {
+  const wrapper = input.closest('.phone-wrapp');
+  if (!wrapper) return;
 
-  return phoneMask.masked.isComplete;
-}
-
-const phoneInput = document.querySelectorAll('input[type="tel"]');
-
-phoneInput?.forEach(input => {
-  if (input) {
-    const iti = intlTelInput(input, {
-      initialCountry: 'auto', // Визначення країни за IP
-      geoIpLookup: callback => {
-        fetch('https://ipapi.co/json') // Або інший API для отримання країни
-          .then(res => res.json())
-          .then(data => callback(data.country_code))
-          .catch(() => callback('UA')); // За замовчуванням Україна
-      },
-      utilsScript:
-        'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/20.1.5/js/utils.js', // Додатковий скрипт для форматування
-    });
-
-    // Отримання номера у міжнародному форматі перед відправкою форми
-    input.addEventListener('blur', () => {
-      console.log('Форматований номер:', iti.getNumber());
-    });
-  }
+  const iti = intlTelInput(input, {
+    strictMode: true,
+    initialCountry: 'auto',
+    geoIpLookup: (success, failure) => {
+      fetch('https://ipapi.co/json')
+        .then(res => res.json())
+        .then(data => success(data.country_code))
+        .catch(() => failure());
+    },
+    loadUtils: () => import('intl-tel-input/build/js/utils.js'),
+    dropdownContainer: wrapper,
+    separateDialCode: true,
+  });
 });

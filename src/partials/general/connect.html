@@ -47,12 +47,9 @@
           </label>
           <label class="label__def">
             <span class="input__def">
-              <input
-                type="tel"
-                placeholder="000 00 00"
-                name="clinic"
-                data-required="true"
-              />
+              <div class="phone-wrapp">
+                <input type="tel" name="phone" data-required="true" />
+              </div>
             </span>
           </label>
           <label class="label__def">
@@ -67,7 +64,7 @@
         </div>
 
         <label class="checkbox__def">
-          <input type="checkbox" name="accept" />
+          <input type="checkbox" name="accept" data-required="true" />
           <span></span>
           <p>I accept the Terms</p>
         </label>
