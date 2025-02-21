@@ -89,7 +89,7 @@ function submitForm(e) {
       toggleCompletPartForm(true);
     }
 
-    if (e.target.id === 'doneForm') {
+    if (e.target.id === 'connectForm') {
       openModal('idDone');
     }
 
