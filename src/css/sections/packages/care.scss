@@ -1,0 +1,75 @@
+.care {
+  &__body {
+    padding: 6.25rem 0;
+  }
+
+  .heading {
+    .tl2 {
+      margin-bottom: 1rem;
+    }
+    margin-bottom: 2rem;
+  }
+  &__desc {
+    color: var(--ce);
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.33;
+  }
+
+  .splide {
+    &__track {
+      overflow: visible;
+    }
+  }
+  &__card {
+    padding: 2rem 1.5rem;
+    border-radius: 1.5rem;
+    background-color: var(--ce);
+    .tl4 {
+      margin-bottom: 0.75rem;
+    }
+    .txt-def {
+      font-size: 0.875rem;
+      line-height: 1.42;
+    }
+  }
+  &__icon {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 3.5rem;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .care {
+    br {
+      display: none;
+    }
+    &__body {
+      padding: 4rem 0;
+    }
+
+    &__desc {
+      font-size: 1rem;
+      line-height: 1.25;
+    }
+
+    &__card {
+      padding: 1.5rem 1rem;
+      border-radius: 1rem;
+      .tl4 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+    &__icon {
+      width: 4rem;
+      height: 4rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+}

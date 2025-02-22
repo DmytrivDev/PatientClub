@@ -84,6 +84,44 @@ if (solutionsSplide) {
   });
 }
 
+const glandSplide = document.querySelector('.gland');
+if (glandSplide) {
+  initSlider(glandSplide, {
+    gap: '1.5rem',
+    perPage: 1,
+    breakpoints: {
+      960: {
+        gap: '1rem',
+        perPage: 2,
+      },
+      760: {
+        perPage: 1,
+      },
+    },
+  });
+}
+
+const careSplide = document.querySelector('.care');
+if (careSplide) {
+  initSlider(careSplide, {
+    perPage: 4,
+    gap: '1.5rem',
+    breakpoints: {
+      960: {
+        pagination: true,
+        perPage: 3,
+        gap: '1rem',
+      },
+      875: {
+        perPage: 2,
+      },
+      575: {
+        perPage: 1,
+      },
+    },
+  });
+}
+
 // const elemSplides = document.querySelectorAll('.elem');
 // elemSplides?.forEach(container => {
 //   initSlider(container, {

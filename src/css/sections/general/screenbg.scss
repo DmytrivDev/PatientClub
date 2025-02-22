@@ -102,6 +102,12 @@
       left: 0;
       width: 100%;
       height: 100%;
+      backdrop-filter: blur(0.75rem);
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.15) 100%
+      );
     }
     video {
       position: absolute;

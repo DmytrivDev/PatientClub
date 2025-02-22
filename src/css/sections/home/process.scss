@@ -1,15 +1,4 @@
 .process {
-  &__bg {
-    &::before {
-      backdrop-filter: blur(0.75rem);
-      background: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.15) 100%
-      );
-    }
-  }
-
   &__body {
     padding: 6.25rem 0;
   }

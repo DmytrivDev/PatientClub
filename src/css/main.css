@@ -36,6 +36,8 @@
 /* Packages */
 /* @import url('./sections/packages/packages.scss'); */
 @import url('./sections/packages/abclub.scss');
+@import url('./sections/packages/gland.scss');
+@import url('./sections/packages/care.scss');
 
 /* Program */
 /* @import url('./sections/program/program.scss'); */
