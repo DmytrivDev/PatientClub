@@ -2,17 +2,6 @@
   min-height: 85.137vh;
   // min-height: 43.751vw;
 
-  & > [class*="__bg"] {
-    &::before {
-      background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.32) 0%,
-        rgba(0, 0, 0, 0.56) 100%
-      );
-      backdrop-filter: blur(0);
-    }
-  }
-
   &__body {
     min-height: 39.375rem;
   }

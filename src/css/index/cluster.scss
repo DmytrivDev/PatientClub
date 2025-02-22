@@ -77,7 +77,8 @@
 
 .splide-wrapp {
   position: relative;
-  &.var1 {
+  &.var1,
+  &.var2 {
     .arrows {
       position: absolute;
       top: -2rem;
@@ -229,6 +230,16 @@
     &.var1 {
       .arrows {
         display: none;
+      }
+    }
+    &.var2 {
+      .arrows {
+        display: block;
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: translateY(0);
+        margin-top: 2rem;
       }
     }
     .arrows {

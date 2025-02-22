@@ -122,6 +122,26 @@ if (careSplide) {
   });
 }
 
+const teamSplide = document.querySelector('.team');
+if (teamSplide) {
+  initSlider(teamSplide, {
+    perPage: 4,
+    gap: '1.5rem',
+    breakpoints: {
+      960: {
+        perPage: 3,
+        gap: '1rem',
+      },
+      875: {
+        perPage: 2,
+      },
+      575: {
+        perPage: 1,
+      },
+    },
+  });
+}
+
 // const elemSplides = document.querySelectorAll('.elem');
 // elemSplides?.forEach(container => {
 //   initSlider(container, {

@@ -33,6 +33,7 @@
           text-decoration-line: underline;
           text-decoration-skip-ink: none;
           text-underline-position: from-font;
+          text-decoration-thickness: 1px;
         }
       }
       & > li,
@@ -135,6 +136,7 @@
         text-decoration-line: underline;
         text-decoration-skip-ink: none;
         text-underline-position: from-font;
+        text-decoration-thickness: 1px;
       }
     }
   }
