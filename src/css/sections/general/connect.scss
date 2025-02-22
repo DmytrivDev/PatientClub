@@ -149,15 +149,124 @@
 
 .phone-wrapp {
   position: relative;
+
   .iti {
     width: 100%;
 
+    .iti__tel-input {
+      padding-left: 8.75rem !important;
+    }
     .iti__selected-dial-code {
       font-variant-numeric: lining-nums proportional-nums;
     }
+    .iti__selected-country {
+      flex-direction: row-reverse;
+      padding: 0 1rem 0 1rem;
+      min-width: 7.6875rem;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 0.0625rem;
+        height: 2.5rem;
+        background-color: var(--cd2);
+      }
+    }
+    .iti__selected-dial-code {
+      margin: 0;
+      font-weight: 600;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-30%) translateY(-50%);
+    }
+    .iti__selected-country-primary {
+      background: none;
+      padding: 0 !important;
+      justify-content: space-between;
+      width: 100%;
+      &:hover {
+        background: none !important;
+      }
+    }
+    .iti__arrow {
+      flex-shrink: 0;
+      margin: 0;
+      border: none;
+      width: auto;
+      height: auto;
+      &::before {
+        content: "";
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        background-size: 1rem 1rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: var(--vectorBla);
+        transition: all 0.15s ease-in;
+      }
+    }
+    .iti__arrow--up {
+      &::before {
+        transform: rotateX(180deg);
+        background-image: var(--vectorGrey);
+      }
+    }
+    .iti__flag {
+      border-radius: 0;
+      transform: scaleX(1.5) scaleY(1.333);
+      margin: 0 0.3125rem;
+    }
+  }
+  .iti--fullscreen-popup.iti--container {
+    background: none;
+    bottom: auto;
+    right: auto;
+    padding: 0 !important;
+    display: block;
   }
   .iti--container {
-    // position: absolute !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    width: 100%;
+
+    .iti__dropdown-content {
+      overflow: hidden;
+      position: relative !important;
+      width: 100% !important;
+      margin-top: 0.5rem;
+      border-radius: 0.5rem;
+      border: 0.0625rem solid var(--cd);
+      background-color: var(--ce);
+      box-shadow:
+        0 0.8125rem 0.5rem 0 rgba(0, 0, 0, 0.03),
+        0 0.375rem 0.375rem 0 rgba(0, 0, 0, 0.05);
+    }
+    .iti__search-input {
+      border-radius: 0 !important;
+      border-top: none !important;
+      border-right: none !important;
+      border-left: none !important;
+    }
+    .iti__country-list {
+      max-height: 11.5625rem;
+      &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 0.1875rem;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--cm);
+        border-radius: 0;
+      }
+    }
+    .iti__country-name {
+      margin-left: 0.3125rem;
+      font-weight: 500;
+    }
   }
 }
 
@@ -200,6 +309,21 @@
       }
       .btn-def {
         order: 2;
+      }
+    }
+  }
+
+  .phone-wrapp {
+    .iti {
+      .iti__tel-input {
+        padding-left: 8.4375rem !important;
+      }
+      .iti__selected-country {
+        padding: 0 0.75rem 0 1.4375rem;
+        min-width: 7.75rem;
+      }
+      .iti__selected-dial-code {
+        transform: translateX(-20%) translateY(-50%);
       }
     }
   }

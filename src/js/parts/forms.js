@@ -2,7 +2,6 @@
 import intlTelInput from 'intl-tel-input';
 import 'intl-tel-input/build/css/intlTelInput.css';
 
-import IMask from 'imask';
 import isEmail from 'validator/lib/isEmail';
 import isEmpty from 'validator/lib/isEmpty';
 
@@ -90,8 +89,18 @@ function submitForm(e) {
     }
 
     if (e.target.id === 'connectForm') {
+      const phoneInput = e.target.querySelector('input[type="tel"]');
+      if (phoneInput && iti) {
+        phoneInput.value = iti.getNumber();
+      }
+
       openModal('idDone');
     }
+
+    // Для тесту
+    const formData = new FormData(e.target);
+    const formValues = Object.fromEntries(formData.entries());
+    console.log(formValues);
 
     // sendForm(e.target);
   }
@@ -115,7 +124,7 @@ function checkFields(field, type, val) {
   }
 
   if (type === 'tel') {
-    if (isEmpty(val)) {
+    if (isEmpty(val) || !iti.isValidNumber()) {
       field.closest('label').classList.add('isRequire');
       errors = true;
     }
@@ -153,11 +162,12 @@ function removeErrors(field) {
 
 const phoneInputs = document.querySelectorAll('input[type="tel"]');
 
+let iti;
 phoneInputs?.forEach(input => {
   const wrapper = input.closest('.phone-wrapp');
   if (!wrapper) return;
 
-  const iti = intlTelInput(input, {
+  iti = intlTelInput(input, {
     strictMode: true,
     initialCountry: 'ua',
     // geoIpLookup: (success, failure) => {
