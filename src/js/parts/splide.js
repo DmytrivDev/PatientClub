@@ -194,6 +194,21 @@ const initPrioritySlider = () => {
   }
 };
 
+let qualitSliderInstances = [];
+const qualit = document.querySelectorAll('.qualit .tabs__cont > div');
+
+const initQualitSlider = () => {
+  if (qualit.length && !qualitSliderInstances.length) {
+    qualit.forEach(container => {
+      const slider = initSlider(container, {
+        perPage: 1,
+        gap: '1rem',
+      });
+      qualitSliderInstances.push(slider);
+    });
+  }
+};
+
 const destroySliders = () => {
   if (certifiedSliderInstance) {
     certifiedSliderInstance.destroy();
@@ -203,11 +218,18 @@ const destroySliders = () => {
     prioritySliderInstance.destroy();
     prioritySliderInstance = null;
   }
+  if (qualitSliderInstances) {
+    qualitSliderInstances.forEach(instance => {
+      instance.destroy();
+    });
+    qualitSliderInstances = [];
+  }
 };
 
 const checkViewport = () => {
   initCertifiedSlider();
   initPrioritySlider();
+  initQualitSlider();
   if (window.innerWidth > 960) {
     destroySliders();
   }

@@ -40,8 +40,8 @@ function initTabController() {
 
     function handleTabBtns(event) {
       const button = event.currentTarget;
-      const therapyId = button.dataset.therapy;
-      const targetTab = document.getElementById(therapyId);
+      const tabId = button.dataset.tab;
+      const targetTab = document.getElementById(tabId);
 
       if (!targetTab) return;
 
