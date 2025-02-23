@@ -52,6 +52,7 @@
 @import url('./sections/about/advanced.scss');
 @import url('./sections/about/qualit.scss');
 @import url('./sections/about/achiev.scss');
+@import url('./sections/about/certif.scss');
 
 /* Contacts */
 /* @import url('./sections/contacts/contacts.scss'); */
