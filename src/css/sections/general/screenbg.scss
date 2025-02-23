@@ -30,15 +30,15 @@
             }
 
             &.var1 {
-              padding-right: 0;
+              padding-right: 4rem;
               padding-left: 4rem;
             }
             &.var2 {
-              padding-right: 0;
+              padding-right: 7rem;
               padding-left: 7rem;
             }
             &.var3 {
-              padding-right: 0;
+              padding-right: 4rem;
               padding-left: 4rem;
             }
           }
@@ -172,6 +172,7 @@
               &.var3 {
                 width: 100%;
                 padding-left: 0;
+                padding-right: 0;
               }
             }
           }
