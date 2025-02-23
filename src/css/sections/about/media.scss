@@ -1,0 +1,53 @@
+.media {
+  &__card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 9.1875rem;
+    padding: 1.5rem 0;
+    max-width: calc((100% - 3 * 1.5rem) / 4);
+    img {
+      max-height: 100%;
+    }
+  }
+
+  .splide {
+    &__track {
+      overflow: visible;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .media {
+    .heading {
+      margin-bottom: 1rem;
+    }
+
+    &__card {
+      gap: 1rem;
+    }
+
+    &__box {
+      height: 7.5rem;
+      max-width: calc((100% - 1 * 1rem) / 2);
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .media {
+    &__box {
+      height: 7.5rem;
+      max-width: 100%;
+      padding: 1rem 0;
+    }
+  }
+}

@@ -142,6 +142,14 @@ if (teamSplide) {
   });
 }
 
+const mediaSplide = document.querySelector('.media');
+if (mediaSplide) {
+  initSlider(mediaSplide, {
+    perPage: 1,
+    gap: '1.5rem',
+  });
+}
+
 // const elemSplides = document.querySelectorAll('.elem');
 // elemSplides?.forEach(container => {
 //   initSlider(container, {
