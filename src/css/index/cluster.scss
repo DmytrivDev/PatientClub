@@ -222,6 +222,7 @@
     }
   }
   &__list {
+    max-width: 100%;
     display: flex;
     flex-wrap: nowrap;
     gap: 0 2rem;

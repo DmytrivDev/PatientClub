@@ -1,7 +1,134 @@
 .qualit {
+  &__card {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 0.5rem solid var(--ce2);
+    background-color: var(--ce);
+    width: 100%;
+    max-width: calc((100% - 1 * 2.5rem) / 2);
+  }
+  &__icon {
+    width: 5rem;
+    height: 5rem;
+    flex-shrink: 0;
+    margin-right: 2rem;
+    img {
+      width: 100%;
+    }
+  }
+  &__box {
+    width: 100%;
+    height: 100%;
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+    border-left: 0.0625rem solid var(--cd);
+    .tl4 {
+      line-height: 1.16;
+    }
+  }
+
+  .heading {
+    padding-right: 0;
+    margin-bottom: 2rem;
+    .tl2 {
+      text-align: center;
+    }
+  }
+
+  .tabs {
+    &__box {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+    &__cont {
+      .arrows {
+        display: none;
+      }
+    }
+  }
+
+  .splide {
+    &__track {
+      overflow: visible;
+    }
+    &__list {
+      flex-direction: column;
+      gap: 1.5rem 0;
+    }
+    &__slide {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem 2.5rem;
+    }
+  }
 }
 
 @media screen and (max-width: 960px) {
   .qualit {
+    &__card {
+      flex-direction: column;
+      align-items: start;
+      padding: 1.375rem;
+      border-radius: 0.75rem;
+      border: 0.25rem solid var(--ce2);
+      max-width: calc((100% - 1 * 1rem) / 2);
+    }
+    &__icon {
+      width: 4rem;
+      height: 4rem;
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+    &__box {
+      align-items: start;
+      padding-left: 0;
+      padding-top: 1rem;
+      border-left: none;
+      border-top: 0.0625rem solid var(--cd);
+      .tl4 {
+        line-height: 1.33;
+      }
+    }
+
+    .heading {
+      margin-bottom: 1.5rem;
+      .tl2 {
+        text-align: start;
+      }
+    }
+
+    .tabs {
+      &__box {
+        justify-content: stretch;
+        margin-bottom: 2rem;
+      }
+      &__cont {
+        .arrows {
+          display: block;
+        }
+      }
+    }
+
+    .splide {
+      &__list {
+        flex-direction: row;
+        gap: 0;
+      }
+      &__slide {
+        gap: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .qualit {
+    &__card {
+      max-width: 100%;
+    }
   }
 }
