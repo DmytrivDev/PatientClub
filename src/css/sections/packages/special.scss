@@ -1,0 +1,163 @@
+.special {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem 0;
+  }
+
+  .ac {
+    [class*="__content"] {
+      color: var(--cm);
+
+      & > * {
+        &:first-child {
+          padding-top: 0;
+          border-top: none;
+        }
+      }
+
+      ul,
+      ol {
+        gap: 0;
+        li {
+          font-size: 1rem;
+          line-height: 1.5;
+          font-weight: 500;
+          color: var(--ch);
+        }
+      }
+    }
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    gap: 0 1.5rem;
+    border-top: 0.0625rem solid var(--cd);
+    padding-top: 1.5rem;
+  }
+  &__desc {
+    .txt-def {
+      margin-bottom: 3.125rem;
+    }
+  }
+  &__price {
+    span {
+      display: block;
+      text-align: right;
+      font-size: 1.125rem;
+      line-height: 1.55;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      color: var(--cg);
+      text-align: right;
+      font-size: 3.5rem;
+      font-weight: 600;
+      line-height: 1.14;
+      text-transform: uppercase;
+    }
+  }
+
+  &__bottom {
+    border-top: 0.0625rem solid var(--cd);
+    padding-top: 1.5rem;
+    .tl4 {
+      margin-bottom: 1.25rem;
+    }
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    gap: 0 1.5rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .special {
+    &__list {
+      gap: 1rem 0;
+    }
+
+    .ac {
+      [class*="__content"] {
+        gap: 1.5rem 0;
+        ul,
+        ol {
+          li {
+            font-size: 0.875rem;
+            line-height: 1.42;
+          }
+        }
+      }
+    }
+
+    &__top {
+      gap: 1rem;
+    }
+    &__desc {
+      .txt-def {
+        margin-bottom: 1rem;
+      }
+      .btn-def {
+        width: fit-content;
+        max-width: 100%;
+      }
+    }
+    &__price {
+      span {
+        font-size: 0.875rem;
+        line-height: 1.42;
+        margin-bottom: 0.25rem;
+      }
+      p {
+        font-size: 2rem;
+        line-height: 1.25;
+      }
+    }
+
+    &__bottom {
+      .tl4 {
+        margin-bottom: 1rem;
+      }
+    }
+    &__items {
+      gap: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .special {
+    &__top {
+      position: relative;
+      grid-template-columns: 1fr;
+      padding-bottom: 5rem;
+    }
+    &__desc {
+      .txt-def {
+        margin-bottom: 0;
+      }
+      .btn-def {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        max-width: 21.5rem;
+      }
+    }
+    &__price {
+      span,
+      p {
+        text-align: left;
+      }
+    }
+
+    &__items {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+}
