@@ -1,0 +1,89 @@
+.better {
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3.125rem;
+    .tl2 {
+      text-align: center;
+      max-width: 59.375rem;
+      margin-bottom: 2rem;
+    }
+    .txt-def {
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.71;
+      text-align: center;
+      max-width: 53.125rem;
+    }
+  }
+  &__sbtl {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.33;
+    text-align: center;
+    max-width: 53.125rem;
+    margin-bottom: 1rem;
+  }
+
+  &__card {
+    border-radius: 1rem;
+    border: 0.25rem solid var(--ce2);
+    background-color: var(--ce);
+    padding: 1.75rem 1.375rem;
+    .tl4 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .total__slide {
+    display: block;
+    color: var(--cr);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.14;
+    margin-bottom: 2rem;
+  }
+  .splide {
+    &__track {
+      overflow: visible;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .better {
+    &__info {
+      align-items: start;
+      margin-bottom: 2rem;
+      .tl2 {
+        text-align: start;
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+      }
+      .txt-def {
+        text-align: start;
+        line-height: 1.42;
+        max-width: 100%;
+      }
+    }
+    &__sbtl {
+      text-align: start;
+      max-width: 100%;
+    }
+
+    &__card {
+      border-radius: 0.75rem;
+      padding: 1.375rem 0.875rem;
+      .tl4 {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .total__slide {
+      font-size: 0.75rem;
+      line-height: 1.33;
+      margin-bottom: 1.5rem;
+    }
+  }
+}

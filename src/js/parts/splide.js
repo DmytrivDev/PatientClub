@@ -158,6 +158,22 @@ if (partnersSplide) {
   });
 }
 
+const betterSplide = document.querySelector('.better');
+if (betterSplide) {
+  initSlider(betterSplide, {
+    perPage: 2,
+    gap: '1.5rem',
+    breakpoints: {
+      960: {
+        gap: '1rem',
+      },
+      760: {
+        perPage: 1,
+      },
+    },
+  });
+}
+
 // const elemSplides = document.querySelectorAll('.elem');
 // elemSplides?.forEach(container => {
 //   initSlider(container, {
