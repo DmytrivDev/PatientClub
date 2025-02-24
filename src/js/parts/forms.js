@@ -111,35 +111,35 @@ function checkFields(field, type, val) {
 
   if (type === 'text') {
     if (isEmpty(val)) {
-      field.closest('label').classList.add('isRequire');
+      field.closest('.label__def').classList.add('isRequire');
       errors = true;
     }
   }
 
   if (type === 'email') {
     if (isEmpty(val) || !isEmail(val)) {
-      field.closest('label').classList.add('isRequire');
+      field.closest('.label__def').classList.add('isRequire');
       errors = true;
     }
   }
 
   if (type === 'tel') {
     if (isEmpty(val) || !iti.isValidNumber()) {
-      field.closest('label').classList.add('isRequire');
+      field.closest('.label__def').classList.add('isRequire');
       errors = true;
     }
   }
 
   if (type === 'checkbox') {
     if (!field.checked) {
-      field.closest('label').classList.add('isRequire');
+      field.closest('.checkbox__def').classList.add('isRequire');
       errors = true;
     }
   }
 
   if (field.tagName === 'SELECT') {
     if (!field.value || field.value === '') {
-      field.closest('label').classList.add('isRequire');
+      field.closest('.label__def').classList.add('isRequire');
       errors = true;
     }
   }
@@ -149,7 +149,7 @@ function checkFields(field, type, val) {
 
 function removeErrors(field) {
   if (field) {
-    const label = field.closest('label');
+    const label = field.closest('.label__def, .checkbox__def');
     if (label && label.classList.contains('isRequire')) {
       label.classList.remove('isRequire');
     }

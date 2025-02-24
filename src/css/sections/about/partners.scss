@@ -1,8 +1,8 @@
-.media {
+.partners {
   &__card {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1.5rem 1.875rem;
   }
 
   &__box {
@@ -11,7 +11,7 @@
     align-items: center;
     width: 100%;
     height: 9.1875rem;
-    max-width: calc((100% - 3 * 1.5rem) / 4);
+    max-width: calc((100% - 1 * 1.875rem) / 2);
     img {
       max-height: 100%;
     }
@@ -21,15 +21,14 @@
     &__track {
       overflow: visible;
     }
+    &__slide {
+      max-width: calc(100% - 28.125rem);
+    }
   }
 }
 
 @media screen and (max-width: 960px) {
-  .media {
-    .heading {
-      margin-bottom: 1rem;
-    }
-
+  .partners {
     &__card {
       gap: 1rem;
     }
@@ -38,11 +37,17 @@
       height: 7.5rem;
       max-width: calc((100% - 1 * 1rem) / 2);
     }
+
+    .splide {
+      &__slide {
+        max-width: 100%;
+      }
+    }
   }
 }
 
 @media screen and (max-width: 575px) {
-  .media {
+  .partners {
     &__box {
       max-width: 100%;
       padding: 1rem 0;

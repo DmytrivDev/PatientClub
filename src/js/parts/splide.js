@@ -150,6 +150,14 @@ if (mediaSplide) {
   });
 }
 
+const partnersSplide = document.querySelector('.partners');
+if (partnersSplide) {
+  initSlider(partnersSplide, {
+    perPage: 1,
+    gap: '1.875rem',
+  });
+}
+
 // const elemSplides = document.querySelectorAll('.elem');
 // elemSplides?.forEach(container => {
 //   initSlider(container, {
