@@ -49,6 +49,7 @@
 
 /* About */
 /* @import url('./sections/about/about.scss'); */
+@import url('./sections/about/whowe.scss');
 @import url('./sections/about/advanced.scss');
 @import url('./sections/about/qualit.scss');
 @import url('./sections/about/achiev.scss');
