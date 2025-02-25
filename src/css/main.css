@@ -71,7 +71,7 @@
 @import url('./sections/error/error.scss');
 
 /* Policy */
-/* @import url('./sections/policy/policy.scss'); */
+@import url('./sections/policy/policy.scss');
 
 /* Footer */
 @import url('./sections/footer/footer.scss');

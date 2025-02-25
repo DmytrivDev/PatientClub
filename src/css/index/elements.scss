@@ -1,3 +1,9 @@
+.pdMain {
+  .main {
+    padding-bottom: 8.5rem;
+  }
+}
+
 .pd1 {
   padding-top: 10rem;
 }
@@ -6,6 +12,9 @@
 }
 .pd3 {
   padding-top: 5rem;
+}
+.pd4 {
+  padding-top: 3.75rem;
 }
 
 .mr1 {
@@ -158,11 +167,21 @@
 }
 
 @media screen and (max-width: 960px) {
+  .pdMain {
+    .main {
+      padding-bottom: 6rem;
+    }
+  }
+
   .pd1,
   .pd2,
   .pd3 {
     padding-top: 6rem;
   }
+  .pd4 {
+    padding-top: 4.0625rem;
+  }
+
   .mr1,
   .mr2,
   .mr3 {

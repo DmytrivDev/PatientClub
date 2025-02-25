@@ -1,10 +1,10 @@
 .embeded {
-  font-size: 1em;
-  line-height: 1.5em;
-  color: var(--cm);
+  font-size: 0.875rem;
+  line-height: 1.71em;
+  color: var(--ch);
 
   & > * {
-    margin-top: 0.75em;
+    margin-top: 1.143em;
 
     &:first-child {
       margin-top: 0;
@@ -18,50 +18,43 @@
   }
 
   a {
-    text-decoration: underline !important;
-    text-underline-position: under;
+    text-decoration-line: underline !important;
+    text-decoration-skip-ink: none;
+    text-underline-position: from-font;
     text-decoration-thickness: 1px !important;
   }
 
   b {
-    display: block;
-    font-size: 1.125em;
-    font-weight: 500;
-    line-height: 1.556em;
-    margin-top: 1em;
+    font-weight: 600;
   }
 
   h1,
-  h2,
+  h2 {
+    font-weight: 600;
+    color: var(--cm);
+    font-size: 3.429em;
+    line-height: normal;
+    margin-top: 1.313em;
+    margin-bottom: 0.667em;
+  }
+
   h3,
   h4,
   h5,
   h6 {
-    font-weight: 600;
-  }
-
-  h2,
-  h3 {
-    font-size: 1.25em;
-    line-height: 1.7em;
-    margin-top: 1em;
-    margin-bottom: 0.75em;
-  }
-
-  h4,
-  h5,
-  h6 {
-    font-size: 1em;
-    line-height: 1.6em;
-    margin-top: 1em;
-    margin-bottom: 0.75em;
+    font-weight: 500;
+    color: var(--cm);
+    font-size: 1.286em;
+    line-height: 1.333em;
+    margin-top: 1.778em;
+    margin-bottom: 0.889em;
   }
 
   ul {
-    margin-left: 1em;
+    margin-left: 0.714em;
 
     li {
-      margin-bottom: 1em;
+      margin-top: 0.571em;
       margin-left: 0.5em;
       list-style: disc;
 
@@ -76,7 +69,7 @@
     margin-left: 0;
 
     li {
-      margin-bottom: 0.5em;
+      margin-top: 0.571em;
       list-style: decimal;
       margin-left: 0;
 
@@ -140,23 +133,27 @@
 
 @media screen and (max-width: 960px) {
   .embeded {
-    font-size: 0.875em;
-    line-height: 1.4em;
-
-    b {
-      font-size: 1em;
-      line-height: 1.45em;
+    & > * {
+      margin-top: 0.571em;
     }
 
-    h2,
-    h3 {
-      font-size: 1em;
+    h1,
+    h2 {
+      font-weight: 500;
+      font-size: 1.286em;
+      line-height: 1.333em;
+      margin-top: 1.778em;
+      margin-bottom: 0.889em;
     }
 
+    h3,
     h4,
     h5,
     h6 {
-      font-size: 0.875em;
+      font-size: 1em;
+      line-height: 1.429em;
+      margin-top: 1.143em;
+      margin-bottom: 0.571em;
     }
   }
 }
