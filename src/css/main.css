@@ -62,7 +62,7 @@
 @import url('./sections/about/media.scss');
 
 /* Contacts */
-/* @import url('./sections/contacts/contacts.scss'); */
+@import url('./sections/contacts/contacts.scss');
 
 /* Search */
 /* @import url('./sections/search/search.scss'); */
