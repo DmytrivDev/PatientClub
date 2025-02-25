@@ -108,8 +108,8 @@
   }
   &.bg-cw {
     background-color: var(--ce);
-    color: var(--cm);
     border-color: var(--ce);
+    color: var(--cm);
     &:hover {
       background-color: transparent;
       color: var(--ce);
@@ -117,8 +117,8 @@
   }
   &.bg-trn {
     background-color: transparent;
-    color: var(--ce);
     border-color: var(--ce);
+    color: var(--ce);
     &:hover {
       background-color: var(--ce);
       color: var(--cm);

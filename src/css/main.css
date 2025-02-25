@@ -68,7 +68,7 @@
 /* @import url('./sections/search/search.scss'); */
 
 /* Error */
-/* @import url('./sections/error/error.scss'); */
+@import url('./sections/error/error.scss');
 
 /* Policy */
 /* @import url('./sections/policy/policy.scss'); */

@@ -1,0 +1,50 @@
+.error {
+  padding: 6.875rem 0;
+  min-height: 38.125rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .tl2 {
+    margin-bottom: 1.5rem;
+  }
+  .txt-def {
+    max-width: 42.8125rem;
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 1.55;
+    margin-bottom: 2rem;
+  }
+  .btn-def {
+    padding: 0.9375rem 1.9375rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .error {
+    padding: 5.9375rem 0;
+    min-height: 37.5rem;
+
+    .txt-def {
+      max-width: 30.9375rem;
+      font-size: 0.875rem;
+      line-height: 1.42;
+      margin-bottom: 1.5rem;
+    }
+    .btn-def {
+      padding: 0.6875rem 1.9375rem;
+    }
+  }
+}
