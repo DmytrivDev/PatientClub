@@ -31,6 +31,7 @@
   }
 
   &__info {
+    margin-bottom: 1.25rem;
     .tl4 {
       margin-bottom: 0.625rem;
     }
@@ -58,11 +59,60 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem 0;
-    margin-bottom: 1.25rem;
   }
 }
 
 @media screen and (max-width: 960px) {
   .doctors {
+    &__top {
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    &__ava {
+      width: 8.5rem;
+      height: 8.5rem;
+    }
+    &__price {
+      p {
+        font-size: 0.75rem;
+        line-height: 1.33;
+        margin-bottom: 0.25rem;
+      }
+      h3 {
+        font-size: 1.75rem;
+        line-height: 1.14;
+      }
+    }
+
+    &__info {
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 0.0625rem solid var(--cd2);
+      .hospital__local {
+        margin-bottom: 1rem;
+      }
+    }
+    &__skills {
+      margin-bottom: 1rem;
+      li {
+        font-size: 0.875rem;
+        line-height: 1.71;
+        padding: 0.1875rem 0.9375rem;
+      }
+    }
+    &__desc {
+      font-size: 0.875rem;
+      line-height: 1.42;
+      gap: 1rem 0;
+      margin-bottom: 0;
+    }
+
+    .hospital__bottom {
+      .btn-def {
+        span {
+          display: none;
+        }
+      }
+    }
   }
 }
