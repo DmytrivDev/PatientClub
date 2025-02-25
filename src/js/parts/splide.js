@@ -174,16 +174,17 @@ if (betterSplide) {
   });
 }
 
-// const elemSplides = document.querySelectorAll('.elem');
-// elemSplides?.forEach(container => {
-//   initSlider(container, {
-//     perPage: 2,
-//     breakpoints: {
-//       960: {},
-//       500: {},
-//     },
-//   });
-// });
+const hospitalSplides = document.querySelectorAll('.hospital .hospital__box');
+hospitalSplides?.forEach(container => {
+  initSlider(container, {
+    perPage: 1,
+    pagination: true,
+    breakpoints: {
+      960: {},
+      500: {},
+    },
+  });
+});
 
 let certifiedSliderInstance;
 const certified = document.querySelector('.certified');

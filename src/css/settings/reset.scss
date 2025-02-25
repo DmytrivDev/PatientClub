@@ -75,6 +75,7 @@
     margin: 0;
     background-color: var(--ce);
     opacity: 0.32;
+    transition: all 0.15s ease-in;
     &.is-active {
       transform: none;
       opacity: 1;

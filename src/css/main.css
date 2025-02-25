@@ -42,6 +42,7 @@
 @import url('./sections/packages/special.scss');
 @import url('./sections/packages/gland.scss');
 @import url('./sections/packages/surgical.scss');
+@import url('./sections/packages/hospital.scss');
 @import url('./sections/packages/care.scss');
 
 /* Program */
