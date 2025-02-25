@@ -65,7 +65,7 @@
 @import url('./sections/contacts/contacts.scss');
 
 /* Search */
-/* @import url('./sections/search/search.scss'); */
+@import url('./sections/search/search.scss');
 
 /* Error */
 @import url('./sections/error/error.scss');
