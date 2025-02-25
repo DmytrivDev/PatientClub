@@ -174,7 +174,7 @@ if (betterSplide) {
   });
 }
 
-const hospitalSplides = document.querySelectorAll('.hospital .hospital__box');
+const hospitalSplides = document.querySelectorAll('.hospital .hospital__card');
 hospitalSplides?.forEach(container => {
   initSlider(container, {
     perPage: 1,

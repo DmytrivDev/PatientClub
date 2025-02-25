@@ -1,10 +1,10 @@
 .hospital {
-  &__content {
+  &__cards {
     display: flex;
     flex-direction: column;
     gap: 1.5rem 0;
   }
-  &__box {
+  &__card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     border-radius: 1.5rem;
@@ -125,7 +125,9 @@
         width: 100%;
       }
     }
+    a,
     p {
+      display: block;
       font-size: 1.125rem;
       line-height: 1.55;
     }
@@ -231,7 +233,7 @@
 
 @media screen and (max-width: 960px) {
   .hospital {
-    &__box {
+    &__card {
       grid-template-columns: 1fr;
       border-radius: 0.75rem;
       border: 0.25rem solid var(--ce2);
@@ -300,6 +302,7 @@
         width: 1.5rem;
         height: 1.5rem;
       }
+      a,
       p {
         font-size: 0.875rem;
         line-height: 1.42;
