@@ -1,10 +1,4 @@
 .hero {
-  min-height: 85.137vh;
-  // min-height: 43.751vw;
-
-  &__body {
-    min-height: 39.375rem;
-  }
   &__container {
     align-items: center;
   }
@@ -110,12 +104,6 @@
 
 @media screen and (max-width: 960px) {
   .hero {
-    min-height: auto;
-
-    &__body {
-      min-height: 46.125rem;
-    }
-
     &__box {
       max-width: 45.3125rem;
       padding: 4.5rem 0;

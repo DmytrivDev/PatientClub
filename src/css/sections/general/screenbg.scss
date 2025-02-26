@@ -3,6 +3,14 @@
   display: flex;
   flex-direction: column;
 
+  &.isFirstSec {
+    min-height: 85.137vh;
+
+    & > [class*="__body"] {
+      min-height: 39.0625rem;
+    }
+  }
+
   &.isFullMod {
     min-height: 85.137vh;
 
@@ -152,6 +160,14 @@
 
 @media screen and (max-width: 960px) {
   .screenbg {
+    &.isFirstSec {
+      min-height: auto;
+
+      & > [class*="__body"] {
+        min-height: 46.125rem;
+      }
+    }
+
     &.isFullMod {
       min-height: auto;
 
