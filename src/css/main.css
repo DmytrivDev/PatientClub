@@ -12,6 +12,7 @@
 
 /* General */
 @import url('./sections/general/screenbg.scss');
+@import url('./sections/general/sechero.scss');
 @import url('./sections/general/reviews.scss');
 @import url('./sections/general/team.scss');
 @import url('./sections/general/fqa.scss');
@@ -47,12 +48,10 @@
 @import url('./sections/packages/care.scss');
 
 /* Program */
-/* @import url('./sections/program/program.scss'); */
 @import url('./sections/program/complex.scss');
 @import url('./sections/program/foryou.scss');
 
 /* About */
-/* @import url('./sections/about/about.scss'); */
 @import url('./sections/about/whowe.scss');
 @import url('./sections/about/advanced.scss');
 @import url('./sections/about/qualit.scss');

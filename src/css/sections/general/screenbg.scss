@@ -139,6 +139,15 @@
         );
       }
     }
+    &.isLinear {
+      &::before {
+        background: linear-gradient(
+          270deg,
+          rgba(0, 0, 0, 0.24) 35.38%,
+          rgba(0, 0, 0, 0.64) 68.72%
+        );
+      }
+    }
   }
 
   & > [class*="__body"] {
