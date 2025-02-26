@@ -69,9 +69,11 @@
       height: 3rem;
       border-radius: 50%;
       background-color: var(--cg);
+      border: 0.0625rem solid var(--cg);
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: all 0.15s ease-in;
       &::before {
         content: "";
         flex-shrink: 0;
@@ -81,6 +83,13 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-image: var(--searchWhi);
+        transition: all 0.15s ease-in;
+      }
+      &:hover {
+        background-color: var(--ce);
+        &::before {
+          background-image: var(--searchGre);
+        }
       }
     }
     input,
@@ -129,6 +138,11 @@
           width: calc(100% + 0.5rem);
           height: calc(100% + 0.5rem);
         }
+      }
+
+      input,
+      .facetwp-search {
+        padding: 0.9375rem 4.875rem 0.9375rem 1.4375rem;
       }
     }
   }
