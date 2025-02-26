@@ -1,4 +1,6 @@
 .sechero {
+  color: var(--ce);
+
   &__box {
     padding: 4rem 0;
     max-width: 38.75rem;
@@ -8,6 +10,50 @@
     }
     .txt-def {
       margin-bottom: 4rem;
+    }
+  }
+
+  &__sbtl {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.55;
+    margin-bottom: 1rem;
+  }
+  &__get {
+    position: relative;
+    min-width: 22.1875rem;
+    width: fit-content;
+    padding: 1.5rem 1.5rem 5rem 1.5rem;
+    border-radius: 2rem;
+    background: linear-gradient(
+      90deg,
+      rgba(254, 254, 254, 0.24) 0%,
+      rgba(254, 254, 254, 0.24) 100%
+    );
+    p {
+      font-size: 1.125rem;
+      line-height: 1.55;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 3.5rem;
+      font-weight: 600;
+      line-height: 1.14;
+      text-transform: uppercase;
+    }
+
+    .btn-def {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      .el-desc {
+      }
+      .el-mob {
+        display: none;
+      }
     }
   }
 }
@@ -34,6 +80,43 @@
       .btn-def {
         margin: 0 auto;
       }
+    }
+    &__sbtl {
+      font-size: 0.875rem;
+      line-height: 1.42;
+    }
+    &__get {
+      min-width: 21.375rem;
+      padding: 1.5rem;
+
+      p {
+        font-size: 0.875rem;
+        line-height: 1.42;
+        margin-bottom: 0.25rem;
+      }
+      h2 {
+        font-size: 3rem;
+        line-height: 1;
+        margin-bottom: 1rem;
+      }
+
+      .btn-def {
+        max-width: 100%;
+        position: static;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        .el-desc {
+          display: none;
+        }
+        .el-mob {
+          display: block;
+        }
+      }
+    }
+
+    .btn-def {
+      padding: 0.6875rem 0.9375rem;
     }
   }
 }

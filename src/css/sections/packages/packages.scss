@@ -1,0 +1,56 @@
+.packages {
+  &__wrapp {
+    display: grid;
+    grid-template-columns: repeat(2, 100vw);
+    position: relative;
+    left: 0;
+    left: -100vw;
+    transition: all 0.45s ease-in;
+  }
+
+  .pack-first {
+    & > [class*="__body"] {
+      & > [class*="__container"] {
+        justify-content: end;
+      }
+    }
+
+    .sechero {
+      &__box {
+        padding: 4rem 0;
+        max-width: 41.5625rem;
+        .tl2 {
+          margin-bottom: 3.125rem;
+        }
+      }
+    }
+  }
+
+  .pack-second {
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .packages {
+    .pack-first {
+      .sechero {
+        &__box {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 0 auto;
+          max-width: 35.625rem;
+          padding: 4rem 0 6.875rem 0;
+          .tl2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+          }
+        }
+        &__sbtl {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

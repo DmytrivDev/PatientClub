@@ -37,7 +37,7 @@
 @import url('./sections/home/process.scss');
 
 /* Packages */
-/* @import url('./sections/packages/packages.scss'); */
+@import url('./sections/packages/packages.scss');
 @import url('./sections/packages/better.scss');
 @import url('./sections/packages/abclub.scss');
 @import url('./sections/packages/special.scss');
