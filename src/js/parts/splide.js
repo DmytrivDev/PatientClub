@@ -227,6 +227,19 @@ const initPrioritySlider = () => {
   }
 };
 
+let missionSliderInstance;
+const mission = document.querySelector('.mission');
+
+const initMissionSlider = () => {
+  if (mission && !missionSliderInstance) {
+    missionSliderInstance = initSlider(mission, {
+      perPage: 1,
+      gap: '1rem',
+      pagination: true,
+    });
+  }
+};
+
 let qualitSliderInstances = [];
 const qualit = document.querySelectorAll('.qualit .tabs__cont > div');
 
@@ -251,6 +264,10 @@ const destroySliders = () => {
     prioritySliderInstance.destroy();
     prioritySliderInstance = null;
   }
+  if (missionSliderInstance) {
+    missionSliderInstance.destroy();
+    missionSliderInstance = null;
+  }
   if (qualitSliderInstances) {
     qualitSliderInstances.forEach(instance => {
       instance.destroy();
@@ -262,6 +279,7 @@ const destroySliders = () => {
 const checkViewport = () => {
   initCertifiedSlider();
   initPrioritySlider();
+  initMissionSlider();
   initQualitSlider();
   if (window.innerWidth > 960) {
     destroySliders();

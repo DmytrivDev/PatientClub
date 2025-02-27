@@ -53,6 +53,7 @@
 
 /* About */
 @import url('./sections/about/whowe.scss');
+@import url('./sections/about/mission.scss');
 @import url('./sections/about/together.scss');
 @import url('./sections/about/advanced.scss');
 @import url('./sections/about/qualit.scss');

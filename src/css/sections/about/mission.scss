@@ -1,0 +1,33 @@
+.mission {
+  &__wrapp {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__body {
+  }
+
+  &__container {
+  }
+
+  &__content {
+  }
+
+  .splide {
+    &__list {
+      display: grid !important;
+      grid-template-columns: repeat(2, 100vw);
+      left: 0;
+      left: -100vw;
+      transition: all 0.45s ease-in;
+    }
+
+    &__slide {
+    }
+  }
+}
+
+.tl2 {
+}
+.txt-def {
+}
