@@ -73,7 +73,7 @@
     display: none;
     width: 2.5rem;
     height: 2.5rem;
-    margin-right: 1.5rem;
+    flex-shrink: 0;
     img {
       width: 100%;
     }
@@ -122,6 +122,41 @@
   .together {
     .heading {
       margin-bottom: 1.5rem;
+    }
+
+    &__cont {
+      .coursorField {
+        display: none;
+      }
+    }
+
+    &__item {
+      &::before {
+        content: none;
+      }
+
+      &:hover {
+        .together__box {
+          background-color: var(--ce);
+        }
+        .tl5 {
+          color: var(--cm);
+        }
+      }
+    }
+    &__box {
+      display: flex;
+      align-items: start;
+      gap: 0 1.5rem;
+      padding: 1rem 0;
+    }
+
+    &__icon {
+      display: block;
+    }
+
+    &__window {
+      display: none;
     }
   }
 }

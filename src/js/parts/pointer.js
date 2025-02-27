@@ -1,12 +1,10 @@
-const pointer = () => {
+const coursorPointer = () => {
   const courField = document.querySelectorAll('.coursorField');
 
   courField?.forEach(el => {
     let coursor = el.nextElementSibling;
 
-    if (!coursor.classList.contains('coursor')) {
-      coursor = null;
-    }
+    coursor = null;
 
     el.addEventListener('mousemove', e => {
       moveCursor(e, coursor);
@@ -27,25 +25,23 @@ const moveCursor = (e, coursor) => {
     coursor.style.left = `${mouseX}px`;
   }
 
-  if (target.classList.contains('allcases')) {
-    alcasesFunc(target);
-    windowMove();
-  }
+  addWindowImg(target);
+  windowMove();
 };
 
-function alcasesFunc(target) {
+function addWindowImg(target) {
   const img = target.dataset.img;
   const mainCont = target.closest('.together__cont');
-  const allCont = mainCont.querySelector('.together__window');
+  const winCont = mainCont.querySelector('.together__window');
 
   if (img) {
-    allCont.classList.remove('imgdef');
+    winCont.classList.remove('imgdef');
   } else {
-    allCont.classList.add('imgdef');
+    winCont.classList.add('imgdef');
   }
 
-  if (allCont) {
-    const imgPl = allCont.querySelector('img');
+  if (winCont) {
+    const imgPl = winCont.querySelector('img');
 
     imgPl.src = img;
   }
@@ -77,4 +73,4 @@ function windowMove() {
   });
 }
 
-pointer();
+document.addEventListener('DOMContentLoaded', coursorPointer);
