@@ -15,7 +15,9 @@ export function closeModal(modal) {
   modal.classList.remove('isOpened', 'isAnimation');
   activeModals.delete(modal);
   unlockScroll();
-  toggleCompletPartForm(false);
+
+  const formId = modal.querySelector('form').id;
+  toggleCompletPartForm(formId, false);
 }
 
 function initCloseModal(modal) {

@@ -1,4 +1,4 @@
-<div class="comment modal" id="idComment">
+<div class="callback comment modal" id="idCallback">
   <div class="modal__container containerModal">
     <div class="modal__body">
       <button
@@ -9,7 +9,7 @@
 
       <div class="modal__wrapp">
         <div class="comment__content">
-          <h2 class="modal__tl">Оставить отзыв</h2>
+          <h2 class="modal__tl">Свяжитесь с нами</h2>
           <div class="txt-def">
             <p>
               Пожалуйста, оставьте свои комментарии и оценки, чтобы мы могли
@@ -17,14 +17,24 @@
             </p>
           </div>
 
-          <form class="form submitForm" id="commentForm">
+          <form class="form submitForm" id="callbackForm">
             <div class="form__box">
               <label class="label__def">
                 <span class="input__def">
                   <input
                     type="text"
-                    placeholder="Ваше Имя*"
+                    placeholder="Имя*"
                     name="name"
+                    data-required="true"
+                  />
+                </span>
+              </label>
+              <label class="label__def">
+                <span class="input__def">
+                  <input
+                    type="text"
+                    placeholder="Фамилия*"
+                    name="surname"
                     data-required="true"
                   />
                 </span>
@@ -39,22 +49,19 @@
                   />
                 </span>
               </label>
-              <label class="label__def">
+              <div class="label__def">
                 <span class="input__def">
-                  <input type="text" placeholder="Откуда вы" name="local" />
+                  <div class="phone-wrapp">
+                    <input type="tel" name="phone" data-required="true" />
+                  </div>
                 </span>
-              </label>
-              <label class="label__def">
-                <span class="input__def">
-                  <input type="text" placeholder="Клиника" name="clinic" />
-                </span>
-              </label>
+              </div>
               <label class="label__def">
                 <span class="area__def">
                   <textarea
                     rows="4"
-                    placeholder="Отзыв"
-                    name="comment"
+                    placeholder="Сообщение"
+                    name="message"
                   ></textarea>
                 </span>
               </label>
@@ -77,11 +84,11 @@
           <span class="complet__icon">
             <img src="./img/icons/done.svg" alt="Done" />
           </span>
-          <h2 class="modal__tl">Оставить отзыв</h2>
+          <h2 class="modal__tl">Сообщение отправлено!</h2>
           <div class="txt-def">
             <p>
-              Ваше мнение очень важно для нас. Мы ценим, что вы нашли время,
-              чтобы поделиться своим опытом. Ваш отзыв поможет нам стать лучше!
+              Мы получили ваше сообщение и скоро с вами свяжемся. Благодарим за
+              обратную связь, мы ценим ваше время и внимание!
             </p>
           </div>
           <button type="button" class="btn-def closeModal">Закрыть</button>

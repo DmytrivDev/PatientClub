@@ -61,6 +61,17 @@
     transition: all 0.15s ease-in;
   }
 
+  &__wrapp {
+    &.isComplet {
+      .comment__content {
+        display: none;
+      }
+      .complet {
+        display: flex;
+      }
+    }
+  }
+
   &__close {
     position: absolute;
     z-index: 100;

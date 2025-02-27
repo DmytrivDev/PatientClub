@@ -7,10 +7,11 @@ import isEmpty from 'validator/lib/isEmpty';
 
 import { openModal } from './modal.js';
 
-export function toggleCompletPartForm(state) {
-  const commentWrapp = document.querySelector('.comment__wrapp');
-  if (!commentWrapp) return;
-  commentWrapp.classList.toggle('isComplet', state);
+export function toggleCompletPartForm(form, state) {
+  const formId = document.getElementById(form);
+  const modalWrapp = formId.closest('.modal__wrapp');
+  if (!modalWrapp) return;
+  modalWrapp.classList.toggle('isComplet', state);
 }
 
 const forms = document.querySelectorAll('.submitForm');
@@ -79,22 +80,38 @@ function submitForm(e) {
     }
   });
 
+  function getPhoneNumber() {
+    const phoneInput = e.target.querySelector('input[type="tel"]');
+    if (phoneInput && iti) {
+      phoneInput.value = iti.getNumber();
+    }
+  }
+
   if (!errors) {
     setTimeout(() => {
       e.target.reset();
     }, 300);
 
     if (e.target.id === 'commentForm') {
-      toggleCompletPartForm(true);
+      setTimeout(() => {
+        toggleCompletPartForm(e.target.id, true);
+      }, 300);
     }
 
     if (e.target.id === 'connectForm') {
-      const phoneInput = e.target.querySelector('input[type="tel"]');
-      if (phoneInput && iti) {
-        phoneInput.value = iti.getNumber();
-      }
+      getPhoneNumber();
 
-      openModal('idDone');
+      setTimeout(() => {
+        openModal('idDone');
+      }, 300);
+    }
+
+    if (e.target.id === 'callbackForm') {
+      getPhoneNumber();
+
+      setTimeout(() => {
+        toggleCompletPartForm(e.target.id, true);
+      }, 300);
     }
 
     // Для тесту

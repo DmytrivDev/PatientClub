@@ -1,14 +1,4 @@
 .comment {
-  &__wrapp {
-    &.isComplet {
-      .comment__content {
-        display: none;
-      }
-      .complet {
-        display: flex;
-      }
-    }
-  }
   &__content {
     .modal__tl {
       margin-bottom: 0.5rem;
