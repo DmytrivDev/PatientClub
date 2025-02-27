@@ -4,6 +4,7 @@ import './parts/modal.js';
 import './parts/navigation.js';
 import './parts/tabs.js';
 import './parts/accordion.js';
+import './parts/pointer.js';
 import './parts/splidecust.js';
 import './parts/splide.js';
 import './parts/forms.js';

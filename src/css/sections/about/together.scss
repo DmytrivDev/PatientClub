@@ -1,0 +1,127 @@
+.together {
+  .heading {
+    margin-bottom: 1.875rem;
+  }
+
+  &__body {
+    display: block;
+    position: relative;
+    z-index: 9;
+  }
+  &__cont {
+    position: relative;
+
+    .coursorField {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      background-image: none !important;
+    }
+
+    &:hover {
+      .together__window {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__list {
+    counter-reset: list-counter;
+    border-top: 0.0625rem solid var(--ca);
+  }
+  &__item {
+    counter-increment: list-counter;
+    position: relative;
+
+    &::before {
+      content: counter(list-counter, decimal-leading-zero) ".";
+      position: absolute;
+      top: 1rem;
+      left: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1.42;
+      color: var(--cr);
+    }
+
+    &:hover {
+      .together__box {
+        background-color: rgba(233, 234, 235, 0.16);
+      }
+      .tl5 {
+        color: var(--cg);
+      }
+    }
+  }
+  &__box {
+    display: block;
+    border-bottom: 0.0625rem solid var(--ca);
+    background-color: var(--ce);
+    transition: all 0.15s ease-in;
+    padding: 1rem 2rem 1rem 7rem;
+    .tl5 {
+      display: block;
+      transition: all 0.15s ease-in;
+    }
+  }
+
+  &__icon {
+    display: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1.5rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 4.6875rem;
+    z-index: 10;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    transform: rotate(4deg);
+    background-color: var(--cg);
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      0.1s opacity,
+      top 0.1s ease;
+
+    .window-def {
+      display: none;
+    }
+
+    &.imgdef {
+      .window-def {
+        display: block;
+      }
+    }
+  }
+
+  .window-def {
+    width: 5.5rem;
+    height: 5.5rem;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .together {
+    .heading {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
