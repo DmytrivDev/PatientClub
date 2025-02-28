@@ -142,21 +142,25 @@ if (teamSplide) {
   });
 }
 
-const mediaSplide = document.querySelector('.media');
-if (mediaSplide) {
-  initSlider(mediaSplide, {
-    perPage: 1,
-    gap: '1.5rem',
-  });
-}
+const mediaSplides = document.querySelectorAll('.media');
+mediaSplides?.forEach(mediaSplide => {
+  if (mediaSplide) {
+    initSlider(mediaSplide, {
+      perPage: 1,
+      gap: '1.5rem',
+    });
+  }
+});
 
-const partnersSplide = document.querySelector('.partners');
-if (partnersSplide) {
-  initSlider(partnersSplide, {
-    perPage: 1,
-    gap: '1.875rem',
-  });
-}
+const partnersSplides = document.querySelectorAll('.partners');
+partnersSplides?.forEach(partnersSplide => {
+  if (partnersSplide) {
+    initSlider(partnersSplide, {
+      perPage: 1,
+      gap: '1.875rem',
+    });
+  }
+});
 
 const betterSplide = document.querySelector('.better');
 if (betterSplide) {
