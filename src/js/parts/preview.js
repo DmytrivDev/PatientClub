@@ -1,7 +1,7 @@
-const steps = document.querySelectorAll('.steps');
+const preview = document.querySelectorAll('.preview');
 
-function initSteps() {
-  steps?.forEach(section => {
+function initPreview() {
+  preview?.forEach(section => {
     const sectionRect = section.getBoundingClientRect();
 
     const viewportHeight = window.innerHeight;
@@ -9,7 +9,7 @@ function initSteps() {
 
     const partFirst = section.querySelector('.part-first');
     const partSecond = section.querySelector('.part-second');
-    const stepsBg = section.querySelector('.steps__body > [class*="__bg"]');
+    const previewBg = section.querySelector('.preview__body > [class*="__bg"]');
 
     if (sectionRect.top <= 0) {
       const scrollableHeight = sectionRect.height - viewportHeight - 300;
@@ -29,7 +29,7 @@ function initSteps() {
       }px)`;
       partFirst.style.opacity = (percentReverse / 100) * 1;
 
-      stepsBg.style.transform = `translateX(-${
+      previewBg.style.transform = `translateX(-${
         (percentForward / 100) * 300
       }px) scale(${percentScale})`;
 
@@ -42,5 +42,5 @@ function initSteps() {
   });
 }
 
-document.addEventListener('scroll', initSteps);
-document.addEventListener('DOMContentLoaded', initSteps);
+document.addEventListener('scroll', initPreview);
+document.addEventListener('DOMContentLoaded', initPreview);
