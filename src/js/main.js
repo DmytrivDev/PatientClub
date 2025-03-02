@@ -7,4 +7,5 @@ import './parts/accordion.js';
 import './parts/pointer.js';
 import './parts/splidecust.js';
 import './parts/splide.js';
+import './parts/lastslide.js';
 import './parts/forms.js';

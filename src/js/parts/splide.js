@@ -10,7 +10,7 @@ specialSplides?.forEach(specialSplide => {
       breakpoints: {
         960: {
           perPage: 1,
-          gap: '0.75rem',
+          gap: '1rem',
         },
       },
     });
@@ -165,6 +165,11 @@ mediaSplides?.forEach(mediaSplide => {
     initSlider(mediaSplide, {
       perPage: 1,
       gap: '1.5rem',
+      breakpoints: {
+        960: {
+          gap: '1rem',
+        },
+      },
     });
   }
 });
@@ -175,6 +180,11 @@ partnersSplides?.forEach(partnersSplide => {
     initSlider(partnersSplide, {
       perPage: 1,
       gap: '1.5rem',
+      breakpoints: {
+        960: {
+          gap: '1rem',
+        },
+      },
     });
   }
 });
@@ -287,83 +297,6 @@ const initQualitSlider = () => {
   }
 };
 
-const contSlides = document.querySelectorAll('.media, .partners, .special');
-
-function adjustSlideWidth() {
-  const windowDesc = window.innerWidth > 960;
-  const windowTabl = window.innerWidth > 575;
-
-  contSlides.forEach(cont => {
-    const splides = cont.querySelectorAll('.splide');
-
-    splides.forEach(splide => {
-      const slides = splide.querySelectorAll('.splide__slide');
-
-      slides.forEach(slide => {
-        const boxs = slide.querySelectorAll(':scope > div');
-        const specialRard = slide.classList.contains('special__card');
-        const partnersCard = slide.classList.contains('partners__card');
-        const mediaCard = slide.classList.contains('media__card');
-
-        const slideStyles = window.getComputedStyle(slide);
-        const boxCount = boxs.length;
-
-        const gap = parseFloat(slideStyles.gap);
-
-        if (specialRard && boxCount <= 2) {
-          slide.style.gridTemplateColumns = '1fr';
-          if (windowDesc) {
-            slide.style.width = `calc((100% - 3 * ${gap}px) / 4)`;
-            slide.style.maxWidth = `calc((100% - 3 * ${gap}px) / 4)`;
-          } else if (windowTabl) {
-            slide.style.width = `calc((100% - ${gap}px) / 2)`;
-            slide.style.maxWidth = `calc((100% - ${gap}px) / 2)`;
-          } else {
-            slide.style.width = '100%';
-            slide.style.maxWidth = '100%';
-          }
-        }
-
-        if (partnersCard && boxCount <= 2) {
-          slide.style.gridTemplateColumns = '1fr';
-          if (windowDesc) {
-            slide.style.width = `calc((100% - 3 * ${gap}px + 28.125rem) / 4)`;
-            slide.style.maxWidth = `calc((100% - 3 * ${gap}px + 28.125rem) / 4)`;
-          } else if (windowTabl) {
-            slide.style.width = `calc((100% - ${gap}px) / 2)`;
-            slide.style.maxWidth = `calc((100% - ${gap}px) / 2)`;
-          } else {
-            slide.style.width = '100%';
-            slide.style.maxWidth = '100%';
-          }
-        }
-
-        if (mediaCard && boxCount % 4 !== 0) {
-          if (windowDesc) {
-            let totalWidth = 0;
-            const maxWidth = `calc((100% - ${gap}px * (${boxCount} - 1)) / ${boxCount})`;
-
-            boxs.forEach(box => {
-              totalWidth += box.offsetWidth;
-              box.style.maxWidth = maxWidth;
-            });
-
-            slide.style.width = `${totalWidth + gap}px`;
-            slide.style.maxWidth = `${totalWidth + gap}px`;
-          } else {
-            boxs.forEach(box => {
-              box.style.maxWidth = '';
-            });
-
-            slide.style.width = '';
-            slide.style.maxWidth = '';
-          }
-        }
-      });
-    });
-  });
-}
-
 const destroySliders = () => {
   if (certifiedSliderInstances) {
     certifiedSliderInstances.forEach(instance => {
@@ -401,11 +334,5 @@ const checkViewport = () => {
   }
 };
 
-window.addEventListener('resize', () => {
-  checkViewport();
-  adjustSlideWidth();
-});
-document.addEventListener('DOMContentLoaded', () => {
-  checkViewport();
-  adjustSlideWidth();
-});
+window.addEventListener('resize', checkViewport);
+document.addEventListener('DOMContentLoaded', checkViewport);
