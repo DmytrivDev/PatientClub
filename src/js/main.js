@@ -3,6 +3,7 @@ import './parts/mobmenu.js';
 import './parts/modal.js';
 import './parts/navigation.js';
 import './parts/preview.js';
+import './parts/steps.js';
 import './parts/tabs.js';
 import './parts/accordion.js';
 import './parts/pointer.js';

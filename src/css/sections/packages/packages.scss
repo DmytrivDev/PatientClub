@@ -6,6 +6,14 @@
   &__wrapp {
     position: relative;
     z-index: 2;
+
+    .screenbg {
+      min-height: 100vh;
+      &.isFirstSec,
+      &.isFullMod {
+        min-height: 100vh;
+      }
+    }
   }
   &__content {
     .tl2 {
@@ -42,19 +50,11 @@
       }
     }
   }
-
   .part-second {
     position: relative;
     z-index: 2;
     top: 0;
     left: 100%;
-  }
-
-  .screenbg {
-    &.isFirstSec,
-    &.isFullMod {
-      min-height: 100vh;
-    }
   }
 }
 

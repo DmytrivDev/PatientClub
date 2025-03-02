@@ -29,14 +29,16 @@ function initPreview() {
       }px)`;
       partFirst.style.opacity = (percentReverse / 100) * 1;
 
-      previewBg.style.transform = `translateX(-${
-        (percentForward / 100) * 300
-      }px) scale(${percentScale})`;
-
       if (windowWidth > 960) {
         partSecond.style.left = `${(percentReverse / 120) * 100}%`;
+
+        previewBg.style.transform = `translateX(-${
+          (percentForward / 100) * 300
+        }px) scale(${percentScale})`;
       } else {
         partSecond.style.left = `${(percentReverse / 90) * 100}%`;
+
+        previewBg.style.transform = `translateX(0) scale(1)`;
       }
     }
   });
