@@ -1,21 +1,37 @@
 .packages {
+  & > [class*="__bg"] {
+    width: calc(100% + 200px);
+    height: calc(100% + 200px);
+  }
   &__wrapp {
-    display: grid;
-    grid-template-columns: repeat(2, 100vw);
     position: relative;
     z-index: 2;
-    left: 0;
-    // left: -100vw;
-    transition: all 0.45s ease-in;
+  }
+  &__content {
+    .tl2 {
+      margin-bottom: 1.5rem;
+    }
+    .tl4 {
+      margin-bottom: 1.5rem;
+    }
+    .txt-def {
+      margin-bottom: 3.125rem;
+    }
   }
 
-  .pack-first {
+  .part-first {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
     & > [class*="__body"] {
       & > [class*="__container"] {
         justify-content: end;
       }
     }
-
     .sechero {
       &__box {
         padding: 4rem 0;
@@ -27,13 +43,49 @@
     }
   }
 
-  .pack-second {
+  .part-second {
+    position: relative;
+    z-index: 2;
+    top: 0;
+    left: 100%;
   }
+
+  .screenbg {
+    &.isFirstSec,
+    &.isFullMod {
+      min-height: 100vh;
+    }
+  }
+}
+
+.steps {
+  position: relative;
+  z-index: 1200;
+}
+.steps__body {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 960px) {
   .packages {
-    .pack-first {
+    &__content {
+      .tl2 {
+        margin-bottom: 1rem;
+      }
+      .tl4 {
+        margin-bottom: 1rem;
+      }
+      .txt-def {
+        margin-bottom: 2rem;
+      }
+      .btn-def {
+        margin: 0 auto;
+      }
+    }
+
+    .part-first {
       .sechero {
         &__box {
           display: flex;
