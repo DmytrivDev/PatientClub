@@ -7,6 +7,7 @@ accord?.forEach(list => {
   new Accordion(list, {
     duration: 400,
     showMultiple: false,
+    openOnInit: [0]
   });
 
   const panels = list.querySelectorAll('.ac-panel');
@@ -16,14 +17,3 @@ accord?.forEach(list => {
     });
   });
 });
-
-// <ul class="accord">
-//   <li class="ac">
-//     <div class="ac-trigger">
-//       <div class="__header"></div>
-//       <div class="ac-panel">
-//         <div class="__content"></div>
-//       </div>
-//     </div>
-//   </li>
-// </ul>
