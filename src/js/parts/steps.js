@@ -14,7 +14,7 @@ function initSteps() {
     const iconsBox2 = section.querySelector('.icons-box span:nth-child(2)');
 
     if (sectionRect.top <= 0 && windowWidth > 960) {
-      const scrollableHeight = sectionRect.height - viewportHeight - 300;
+      const scrollableHeight = sectionRect.height - viewportHeight;
       const scrolledInSection = Math.abs(sectionRect.top);
       const scrollPercent = (scrolledInSection / scrollableHeight) * 100;
       const fixedMaxPercent = Math.max(0, Math.min(scrollPercent, 100));
