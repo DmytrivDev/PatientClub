@@ -13,7 +13,7 @@ function initSteps() {
     const iconsBox1 = section.querySelector('.icons-box span:nth-child(1)');
     const iconsBox2 = section.querySelector('.icons-box span:nth-child(2)');
 
-    if (sectionRect.top <= 0 && windowWidth > 960) {
+    if (sectionRect.top <= 0) {
       const scrollableHeight = sectionRect.height - viewportHeight;
       const scrolledInSection = Math.abs(sectionRect.top);
       const scrollPercent = (scrolledInSection / scrollableHeight) * 100;
@@ -36,6 +36,17 @@ function initSteps() {
       partSecond.style.transform = `translateY(${
         (percentReverse / 100) * 100
       }%)`;
+
+      if (windowWidth < 960) {
+        iconsBox1.style.opacity = 1;
+        iconsBox2.style.opacity = 1;
+
+        partFirst.style.opacity = 1;
+        partSecond.style.opacity = 1;
+
+        partFirst.style.transform = '';
+        partSecond.style.transform = '';
+      }
     }
   });
 }

@@ -14,7 +14,7 @@
 
   &__content {
     padding-top: 3rem !important;
-    padding-bottom: 3rem !important ;
+    padding-bottom: 3rem !important;
     &::before {
       border: none !important;
     }
@@ -38,6 +38,7 @@
       }
     }
   }
+
   &__icons {
     position: absolute;
     top: 50%;
@@ -103,6 +104,9 @@
       }
     }
   }
+  &__icon {
+    display: none;
+  }
 
   .splide {
     display: flex;
@@ -153,5 +157,92 @@
 
 @media screen and (max-width: 960px) {
   .mission {
+    &__wrapp {
+      .screenbg {
+        min-height: auto;
+        &.isFirstSec,
+        &.isFullMod {
+          min-height: auto;
+        }
+      }
+    }
+
+    &__content {
+      padding-bottom: 1.5rem !important;
+
+      .tl2 {
+        margin-bottom: 1rem;
+      }
+      .txt-def {
+        & > * {
+          margin-top: 0.25rem;
+        }
+        h3 {
+          line-height: 1.42;
+          font-size: 0.875rem;
+          margin-top: 1rem;
+          margin-bottom: 0.25rem;
+        }
+      }
+    }
+
+    &__icons {
+      display: none;
+    }
+    &__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 7rem;
+      height: 7rem;
+      border-radius: 50%;
+      border: 0.125rem solid var(--ca);
+      margin-bottom: 2rem;
+      span {
+        width: 4.5rem;
+        height: 4.5rem;
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .splide {
+      display: block;
+      flex: 0 0 auto;
+      &__track {
+        flex: 0 0 auto;
+      }
+    }
+
+    .part-first,
+    .part-second {
+      position: static;
+      top: auto;
+      left: auto;
+      bottom: auto;
+      right: auto;
+      justify-content: start;
+    }
+    .part-second {
+      transform: translateY(0);
+    }
+
+    .splide__pagination {
+      margin-top: 2.5rem;
+    }
+  }
+
+  .steps {
+    height: 100% !important;
+    z-index: 5;
+
+    .screenbg {
+      min-height: auto;
+    }
+  }
+  .steps__body {
+    position: static;
+    top: auto;
   }
 }
