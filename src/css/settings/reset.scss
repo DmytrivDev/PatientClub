@@ -77,8 +77,8 @@
     opacity: 0.32;
     transition: all 0.15s ease-in;
     &.is-active {
-      transform: none;
-      opacity: 1;
+      transform: none !important;
+      opacity: 1 !important;
     }
   }
 }
@@ -95,6 +95,13 @@
           height: 1.5rem;
           background-size: 1.5rem 1.5rem;
         }
+      }
+    }
+
+    // ============== Splide ==============
+    .splide__pagination__page {
+      &:hover {
+        opacity: 0.32;
       }
     }
   }

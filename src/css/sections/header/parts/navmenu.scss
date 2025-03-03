@@ -349,12 +349,13 @@
           & > ul,
           & > .sub-menu {
             height: 0;
-            opacity: 0;
             visibility: hidden;
             overflow: hidden;
             width: 100%;
             transition: all 0.15s ease-in;
             a {
+              font-weight: 500;
+              line-height: 1.5;
               padding: 0.25rem 0.5rem;
             }
           }
@@ -373,10 +374,6 @@
               height: 100%;
               opacity: 1;
               visibility: visible;
-              a {
-                font-weight: 500;
-                line-height: 1.5;
-              }
             }
           }
         }
