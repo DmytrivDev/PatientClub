@@ -1,4 +1,4 @@
-// import axios from 'axios';
+import axios from 'axios';
 import intlTelInput from 'intl-tel-input';
 import 'intl-tel-input/build/css/intlTelInput.css';
 
@@ -20,32 +20,49 @@ forms?.forEach(form => {
   form.addEventListener('submit', submitForm);
 });
 
-// async function sendForm(form) {
-//   const ajaxurl = '/wp-admin/admin-ajax.php';
-//   const headers = { 'Content-Type': 'multipart/form-data' };
-//   const myFormData = new FormData(form);
-//   const params = Object.fromEntries(myFormData.entries());
+async function sendForm(form) {
+  const ajaxurl = '/wp-admin/admin-ajax.php';
+  const myFormData = new FormData(form);
 
-//   try {
-//     const responce = await axios.get(ajaxurl, { params }, { headers });
-//     console.log(responce.data);
-//     if (responce.data !== 'error') {
-//       formEnd(form, true);
-//     } else {
-//       formEnd(form, false);
-//     }
-//   } catch (error) {
-//     formEnd(form, false);
-//   }
-// }
+  try {
+    const response = await axios.post(ajaxurl, myFormData);
+
+    if (response.data !== 'error') {
+      formEnd(form, true);
+    } else {
+      formEnd(form, false);
+    }
+  } catch (error) {
+    formEnd(form, false);
+    console.error('Error:', error);
+  }
+}
 
 function formEnd(form, status) {
   if (status) {
-    const successUrl = form.data.success;
+    if (form.id === 'commentForm') {
+      toggleCompletPartForm(form.id, true);
+    }
 
-    window.location.href = successUrl;
+    if (form.id === 'connectForm') {
+      // getPhoneNumber();
+
+      setTimeout(() => {
+        openModal('idDone');
+      }, 300);
+    }
+
+    if (form.id === 'callbackForm') {
+      // getPhoneNumber();
+
+      setTimeout(() => {
+        toggleCompletPartForm(form.id, true);
+      }, 300);
+    }
   } else {
-    alert('Форма не відправлена. Спробуйте ще раз');
+    setTimeout(() => {
+      openModal('idError');
+    }, 300);
   }
 }
 
@@ -82,44 +99,22 @@ function submitForm(e) {
 
   function getPhoneNumber() {
     const phoneInput = e.target.querySelector('input[type="tel"]');
-    if (phoneInput && iti) {
-      phoneInput.value = iti.getNumber();
+    const phoneInput2 = e.target.querySelector('input[name="phone"]');
+    if (phoneInput && iti && phoneInput2) {
+      phoneInput2.value = iti.getNumber();
     }
   }
 
   if (!errors) {
     setTimeout(() => {
       e.target.reset();
-    }, 300);
+    }, 1000);
 
-    if (e.target.id === 'commentForm') {
-      setTimeout(() => {
-        toggleCompletPartForm(e.target.id, true);
-      }, 300);
-    }
-
-    if (e.target.id === 'connectForm') {
+    if (e.target.id === 'connectForm' || e.target.id === 'callbackForm') {
       getPhoneNumber();
-
-      setTimeout(() => {
-        openModal('idDone');
-      }, 300);
     }
-
-    if (e.target.id === 'callbackForm') {
-      getPhoneNumber();
-
-      setTimeout(() => {
-        toggleCompletPartForm(e.target.id, true);
-      }, 300);
-    }
-
-    // Для тесту
-    const formData = new FormData(e.target);
-    const formValues = Object.fromEntries(formData.entries());
-    console.log(formValues);
-
-    // sendForm(e.target);
+    
+    sendForm(e.target);
   }
 }
 

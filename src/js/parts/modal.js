@@ -5,8 +5,11 @@ import { toggleCompletPartForm } from './forms.js';
 const activeModals = new Set();
 const initializedModals = new WeakSet();
 
-function showModal(modal) {
+function showModal(modal, modalLead) {
   modal.classList.add('isOpened', 'isAnimation');
+  if (modal.querySelector('input[name="lead"]')) {
+    modal.querySelector('input[name="lead"]').value = modalLead;
+  }
   lockScroll(modal);
   activeModals.add(modal);
 }
@@ -41,7 +44,7 @@ function initCloseModal(modal) {
   initializedModals.add(modal);
 }
 
-export function openModal(modalId) {
+export function openModal(modalId, modalLead) {
   const modal = document.getElementById(modalId);
   if (modal) {
     activeModals.forEach(activeModal => {
@@ -55,7 +58,7 @@ export function openModal(modalId) {
     }
 
     if (!modal.classList.contains('isOpened')) {
-      showModal(modal);
+      showModal(modal, modalLead);
     }
   }
 }
@@ -65,8 +68,9 @@ function initOpenModal() {
   btnsOpenModal.forEach(btn => {
     btn.addEventListener('click', () => {
       const modalId = btn.dataset.id;
+      const modalLead = btn.dataset.lead ? btn.dataset.lead : '';
       if (modalId) {
-        openModal(modalId);
+        openModal(modalId, modalLead);
       }
     });
   });
