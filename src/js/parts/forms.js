@@ -100,8 +100,13 @@ function submitForm(e) {
   function getPhoneNumber() {
     const phoneInput = e.target.querySelector('input[type="tel"]');
     const phoneInput2 = e.target.querySelector('input[name="phone"]');
-    if (phoneInput && iti && phoneInput2) {
-      phoneInput2.value = iti.getNumber();
+
+    if (phoneInput && phoneInput2) {
+      const iti = itiInstances.get(phoneInput);
+
+      if (iti) {
+        phoneInput2.value = iti.getNumber();
+      }
     }
   }
 
@@ -113,7 +118,7 @@ function submitForm(e) {
     if (e.target.id === 'connectForm' || e.target.id === 'callbackForm') {
       getPhoneNumber();
     }
-    
+
     sendForm(e.target);
   }
 }
@@ -136,7 +141,8 @@ function checkFields(field, type, val) {
   }
 
   if (type === 'tel') {
-    if (isEmpty(val) || !iti.isValidNumber()) {
+    const iti = itiInstances.get(field);
+    if (!iti || isEmpty(val) || !iti.isValidNumber()) {
       field.closest('.label__def').classList.add('isRequire');
       errors = true;
     }
@@ -173,13 +179,13 @@ function removeErrors(field) {
 }
 
 const phoneInputs = document.querySelectorAll('input[type="tel"]');
+const itiInstances = new Map();
 
-let iti;
 phoneInputs?.forEach(input => {
   const wrapper = input.closest('.phone-wrapp');
   if (!wrapper) return;
 
-  iti = intlTelInput(input, {
+  const iti = intlTelInput(input, {
     strictMode: true,
     initialCountry: 'ua',
     // geoIpLookup: (success, failure) => {
@@ -192,4 +198,6 @@ phoneInputs?.forEach(input => {
     dropdownContainer: wrapper,
     separateDialCode: true,
   });
+
+  itiInstances.set(input, iti);
 });
