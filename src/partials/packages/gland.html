@@ -1,7 +1,9 @@
 <!-- screenbg *Важливо: класи isReverse, var(1-3) працюють у зв'язці з isFullMod! -->
 <section class="gland screenbg isFullMod mr3">
   <div class="gland__bg ibg no-select">
-    <img src="./img/content/gland_1.jpg" alt="" />
+    <img class="gland__slideimg active" id="sl_1" src="./img/content/gland_1.jpg" alt="" />
+    <img class="gland__slideimg" id="sl_2" src="./img/content/club_1.jpg" alt="" />
+    <img class="gland__slideimg" id="sl_3" src="./img/content/packag_1.jpg" alt="" />
   </div>
 
   <div class="gland__body">
@@ -15,7 +17,7 @@
           <div class="splide">
             <div class="splide__track">
               <ul class="splide__list">
-                <li class="splide__slide gland__slide">
+                <li data-slide="sl_1" class="splide__slide gland__slide">
                   <span class="total__slide"></span>
                   <h3 class="tl4">Хирургическое лечение</h3>
                   <div class="txt-def">
@@ -33,7 +35,7 @@
                     Заказать консультацию
                   </button>
                 </li>
-                <li class="splide__slide gland__slide">
+                <li data-slide="sl_2" class="splide__slide gland__slide">
                   <span class="total__slide"></span>
                   <h3 class="tl4">Лучевая терапия</h3>
                   <div class="txt-def">
@@ -49,7 +51,7 @@
                     Заказать консультацию
                   </button>
                 </li>
-                <li class="splide__slide gland__slide">
+                <li data-slide="sl_3" class="splide__slide gland__slide">
                   <span class="total__slide"></span>
                   <h3 class="tl4">Таргетная терапия и иммунотерапия</h3>
                   <div class="txt-def">
@@ -59,38 +61,6 @@
                       сохраняя здоровые ткани. Эти "умные" лекарства
                       обеспечивают более точное и эффективное лечение, сокращая
                       время восстановления и повышая ваши шансы на успех.
-                    </p>
-                  </div>
-                  <button type="button" class="btn-def">
-                    Заказать консультацию
-                  </button>
-                </li>
-                <li class="splide__slide gland__slide">
-                  <span class="total__slide"></span>
-                  <h3 class="tl4">Химиотерапия</h3>
-                  <div class="txt-def">
-                    <p>
-                      Турецкие клиники предлагают химиотерапию по самым
-                      современным протоколам с индивидуальной подборкой
-                      препаратов, минимизируя побочные эффекты и максимизируя
-                      эффективность лечения. Ваше лечение будет адаптировано под
-                      вас и ваши потребности.
-                    </p>
-                  </div>
-                  <button type="button" class="btn-def">
-                    Заказать консультацию
-                  </button>
-                </li>
-                <li class="splide__slide gland__slide">
-                  <span class="total__slide"></span>
-                  <h3 class="tl4">Гормональная терапия</h3>
-                  <div class="txt-def">
-                    <p>
-                      Для лечения гормонозависимых форм рака молочной железы в
-                      Турции используются последние достижения в области
-                      гормональной терапии. Этот метод помогает остановить рост
-                      опухоли и предотвратить рецидивы, предоставляя вам больше
-                      шансов на долгую и здоровую жизнь.
                     </p>
                   </div>
                   <button type="button" class="btn-def">

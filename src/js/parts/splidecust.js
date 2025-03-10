@@ -15,6 +15,28 @@ export const initSlider = (container, options = {}) => {
     ...options,
   }).mount();
 
+  if (container.classList.contains('gland')) {
+    splide.on('move', newIndex => {
+      const currentSlide = sliderElement.querySelector(
+        `.gland__slide.is-active`
+      );
+      const dataSlide = currentSlide?.getAttribute('data-slide');
+
+      if (dataSlide) {
+        const allSlides = document.querySelectorAll('.gland__slideimg');
+
+        allSlides.forEach(slide => slide.classList.remove('active'));
+
+        const targetSlide = document.querySelector(
+          `.gland__slideimg#${dataSlide}`
+        );
+        if (targetSlide) {
+          targetSlide.classList.add('active');
+        }
+      }
+    });
+  }
+
   const optionsType = splide.options.type;
 
   const arrows = container.querySelectorAll('.arrows');

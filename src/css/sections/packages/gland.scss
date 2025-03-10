@@ -35,6 +35,15 @@
   }
 }
 
+.gland__slideimg {
+  opacity: 0;
+  transition: 1s;
+
+  &.active {
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 960px) {
   .gland {
     &__content {
