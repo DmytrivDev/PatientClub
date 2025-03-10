@@ -45,16 +45,12 @@ function formEnd(form, status) {
     }
 
     if (form.id === 'connectForm') {
-      // getPhoneNumber();
-
       setTimeout(() => {
         openModal('idDone');
       }, 300);
     }
 
     if (form.id === 'callbackForm') {
-      // getPhoneNumber();
-
       setTimeout(() => {
         toggleCompletPartForm(form.id, true);
       }, 300);
@@ -99,7 +95,7 @@ function submitForm(e) {
 
   function getPhoneNumber() {
     const phoneInput = e.target.querySelector('input[type="tel"]');
-    const phoneInput2 = e.target.querySelector('input[name="phone"]');
+    const phoneInput2 = e.target.querySelector('input[name="phn"]');
 
     if (phoneInput && phoneInput2) {
       const iti = itiInstances.get(phoneInput);
