@@ -1,4 +1,11 @@
 .mission {
+  & > [class*="__bg"] {
+    img {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
   &__wrapp {
     position: relative;
     z-index: 2;
@@ -157,6 +164,17 @@
 
 @media screen and (max-width: 960px) {
   .mission {
+    & > [class*="__bg"] {
+      img {
+        &:nth-child(1) {
+          display: none;
+        }
+        &:nth-child(2) {
+          display: block;
+        }
+      }
+    }
+
     &__wrapp {
       .screenbg {
         min-height: auto;

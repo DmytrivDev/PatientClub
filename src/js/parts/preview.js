@@ -7,12 +7,22 @@ function initPreview() {
     const viewportHeight = window.innerHeight;
     const windowWidth = window.innerWidth;
 
+    const header = document.querySelector('.header');
+
     const partFirst = section.querySelector('.part-first');
     const partSecond = section.querySelector('.part-second');
     const previewBg = section.querySelector('.preview__body > [class*="__bg"]');
 
+    if (sectionRect.top <= 0 && sectionRect.bottom > 0 && windowWidth > 960) {
+      header.style.opacity = 0;
+      header.style.visibility = 'hidden';
+    } else {
+      header.style.opacity = 1;
+      header.style.visibility = 'visible';
+    }
+
     if (sectionRect.top <= 0) {
-      const scrollableHeight = sectionRect.height - viewportHeight;
+      const scrollableHeight = sectionRect.height - viewportHeight - 350;
       const scrolledInSection = Math.abs(sectionRect.top);
       const scrollPercent = (scrolledInSection / scrollableHeight) * 100;
       const fixedMaxPercent = Math.max(0, Math.min(scrollPercent, 100));
@@ -27,7 +37,8 @@ function initPreview() {
       partFirst.style.transform = `translateY(-${
         (percentForward / 100) * 150
       }px)`;
-      partFirst.style.opacity = (percentReverse / 100) * 1;
+
+      partFirst.style.opacity = Math.pow(percentReverse / 100, 3);
 
       partSecond.style.left = `${(percentReverse / 120) * 100}%`;
 
@@ -36,7 +47,8 @@ function initPreview() {
       }px) scale(${percentScale})`;
 
       if (windowWidth < 960) {
-        partSecond.style.left = `${(percentReverse / 90) * 100}%`;
+        partFirst.style.transform = `translateY(0)`;
+        partFirst.style.opacity = 1;
 
         previewBg.style.transform = `translateX(0) scale(1)`;
       }

@@ -1,8 +1,9 @@
 .packages {
   & > [class*="__bg"] {
-    width: calc(100% + 200px);
-    height: calc(100% + 200px);
+    width: calc(100% + 12.5rem);
+    height: calc(100% + 12.5rem);
   }
+
   &__wrapp {
     position: relative;
     z-index: 2;
@@ -12,6 +13,9 @@
       &.isFirstSec,
       &.isFullMod {
         min-height: 100vh;
+        & > [class*="__body"] {
+          min-height: 40.625rem;
+        }
       }
     }
   }
@@ -42,7 +46,7 @@
     }
     .sechero {
       &__box {
-        padding: 4rem 0;
+        padding: 4rem 0 9.875rem 0;
         max-width: 41.5625rem;
         .tl2 {
           margin-bottom: 3.125rem;
@@ -60,7 +64,7 @@
 
 .preview {
   position: relative;
-  z-index: 1200;
+  z-index: 1000;
 }
 .preview__body {
   position: sticky;
@@ -70,6 +74,23 @@
 
 @media screen and (max-width: 960px) {
   .packages {
+    & > [class*="__bg"] {
+      width: 100%;
+      height: 100%;
+    }
+    &__wrapp {
+      .screenbg {
+        min-height: 100%;
+        &.isFirstSec,
+        &.isFullMod {
+          min-height: 100%;
+
+          & > [class*="__body"] {
+            min-height: 42.6875rem;
+          }
+        }
+      }
+    }
     &__content {
       .tl2 {
         margin-bottom: 1rem;
@@ -86,6 +107,11 @@
     }
 
     .part-first {
+      position: static;
+      top: auto;
+      left: auto;
+      bottom: auto;
+      right: auto;
       .sechero {
         &__box {
           display: flex;
@@ -105,5 +131,18 @@
         }
       }
     }
+    .part-second {
+      display: none;
+      left: -100% !important;
+    }
+  }
+
+  .preview {
+    z-index: 10;
+    height: auto !important;
+  }
+  .preview__body {
+    position: static;
+    top: auto;
   }
 }

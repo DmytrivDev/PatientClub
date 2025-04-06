@@ -2,6 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 1100;
+  transition: all 0.15s ease-in;
 
   &__top {
     padding: 0.5rem 0;

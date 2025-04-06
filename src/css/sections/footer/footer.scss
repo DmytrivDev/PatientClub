@@ -137,6 +137,10 @@
         text-decoration-skip-ink: none;
         text-underline-position: from-font;
         text-decoration-thickness: 1px;
+        transition: all 0.15s ease-in;
+        &:hover {
+          opacity: 0.64;
+        }
       }
     }
   }

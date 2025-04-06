@@ -130,6 +130,7 @@
           transition: all 0.15s ease-in;
         }
       }
+      a,
       p {
         color: var(--ce3);
         font-weight: 600;
@@ -137,6 +138,12 @@
         text-decoration-skip-ink: none;
         text-underline-position: from-font;
         text-decoration-thickness: 1px;
+      }
+      a {
+        transition: all 0.15s ease-in;
+        &:hover {
+          opacity: 0.64;
+        }
       }
       &.isRequire {
         span {

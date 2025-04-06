@@ -49,8 +49,6 @@
       left: 0;
       right: 0;
       z-index: 1;
-      .el-desc {
-      }
       .el-mob {
         display: none;
       }
@@ -62,7 +60,7 @@
   .sechero {
     & > [class*="__body"] {
       & > [class*="__container"] {
-        justify-content: end;
+        justify-content: center;
       }
     }
 
