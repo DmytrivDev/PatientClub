@@ -72,6 +72,14 @@
   overflow: hidden;
 }
 
+@media screen and (min-width: 961px) {
+  .packages {
+    .part-first, .part-second {
+      background-image: none !important;
+    }
+  }
+}
+
 @media screen and (max-width: 960px) {
   .packages {
     & > [class*="__bg"] {
@@ -132,8 +140,9 @@
       }
     }
     .part-second {
-      display: none;
-      left: -100% !important;
+      position: static !important;
+      transform: none !important;
+      display: block !important;
     }
   }
 
